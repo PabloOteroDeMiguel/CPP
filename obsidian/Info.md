@@ -32,4 +32,11 @@ int main() {
 5. double. (more specific than float).
 6.  bool. (true or false).
 
+### Working with Strings (00:39:15)
+
+**Example:**
+	string.cpp
+
+### Working with numbers (00:49:00)
+
 
