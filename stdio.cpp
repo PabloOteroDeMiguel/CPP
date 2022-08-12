@@ -6,11 +6,12 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:42:45 by potero-d          #+#    #+#             */
-/*   Updated: 2022/08/12 12:56:06 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/08/12 17:42:04 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <ostream>
 
 int		main(void) {
 

@@ -1,7 +1,0 @@
-
-Tutorial de C++;
-https://www.youtube.com/watch?v=vLnPwxZdW4Y
---------------------------------------------
-cout --> console out.
-endl --> end line.
-cin  --> console in.
