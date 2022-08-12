@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stdio.cpp                                          :+:      :+:    :+:   */
+/*   variables.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 12:42:45 by potero-d          #+#    #+#             */
-/*   Updated: 2022/08/12 18:38:35 by potero-d         ###   ########.fr       */
+/*   Created: 2022/08/12 18:09:41 by potero-d          #+#    #+#             */
+/*   Updated: 2022/08/12 18:45:18 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <ostream>
+#include <string>
 
-int		main(void) {
+int	main () {
 
-	char	buff[512];
+	std::string	characterName = "Robot";
+	int		characterAge = 1227;
 
-	std::cout << "Hello world! " << std::endl;
-
-	std::cout << "Input a word: ";
-	std::cin >> buff;
-	std::cout << "You entered: [" << buff << "]" << std::endl;
+	std::cout << "There once was a robot called " << characterName << std::endl;
+	std::cout << "He was " << characterAge << " years old" << std::endl; 
+	std::cout << "He liked the name " << characterName << std::endl;
+	std::cout << "But he doesn´t care being " << characterAge << " because he was a robot" << std::endl;
 
 	return 0;
 }
