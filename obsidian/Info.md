@@ -38,5 +38,12 @@ int main() {
 	string.cpp
 
 ### Working with numbers (00:49:00)
+*If you operate with two int you will have an int back.
+ie:*
+- 10 / 3 = 3
+- 10 / 3.0 = 3.333
 
+**Example:**
+	numbers.cpp
 
+### Getting User Input (00:59:41)
