@@ -37,7 +37,7 @@ int main() {
 **Example:**
 	string.cpp
 
-### Working with numbers (00:49:00)
+### <span class ="yelow">Working with numbers (00:49:00) </span>
 *If you operate with two int you will have an int back.
 ie:*
 - 10 / 3 = 3
@@ -47,3 +47,12 @@ ie:*
 	numbers.cpp
 
 ### Getting User Input (00:59:41)
+*For numbers or character we use **std::cin**
+For strings we use **std::getline( )** 
+
+**Example:**
+	input.cpp**
+
+### Building a Calculator (1:05:32)
+
+
