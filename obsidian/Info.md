@@ -1,4 +1,4 @@
-# Tutorial  C++;
+# <font style="color:red">Tutorial  C++;</font>
 
 ```c++
  #include <iostream>
@@ -12,17 +12,16 @@ int main() {
 ```
 
 
-### Variables (00:20:00)
+### <font style="color:yellow">Variables (00:20:00)</font>
 *Container for a piece of data.*
 
 1. string.
 2. int.
 
-**Example:**
-	variables.cpp
+<font style="color:orange"> Example:</font>
+		[[variables.cpp]]
 
-
-### Data Types (00:31:43)
+### <font style="color:yellow">Data Types (00:31:43)</font>
 *Type of data or information we can use and work with inside C++ programs*
 
 1. char.
@@ -32,27 +31,25 @@ int main() {
 5. double. (more specific than float).
 6.  bool. (true or false).
 
-### Working with Strings (00:39:15)
+### <font style="color:yellow">Working with Strings (00:39:15) </font>
 
-**Example:**
-	string.cpp
+<font style="color:orange"> Example:</font>
+		[[strings.cpp]]
 
-### <span class ="yelow">Working with numbers (00:49:00) </span>
+### <font style="color:yellow">Working with numbers (00:49:00) </font>
 *If you operate with two int you will have an int back.
 ie:*
 - 10 / 3 = 3
 - 10 / 3.0 = 3.333
 
-**Example:**
-	numbers.cpp
+ <font style="color:orange"> Example:</font>
+		[[numbers.cpp]]
 
-### Getting User Input (00:59:41)
+### <font style="color:yellow"> Getting User Input (00:59:41)</font>
 *For numbers or character we use **std::cin**
 For strings we use **std::getline( )** 
 
-**Example:**
-	input.cpp**
+<font style="color:orange"> Example:</font>
+		[[input.cpp]]**
 
-### Building a Calculator (1:05:32)
-
-
+### <font style="color:yellow"> Building a Calculator (1:05:32)</font>
