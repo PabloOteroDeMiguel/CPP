@@ -62,3 +62,6 @@ For strings we use **std::getline( )**
 
 <font style="color:orange"> Example:</font>
 		[[arrays.cpp]]
+
+### <font style="color:yellow"> Functions (1:20:03)</font>
+
