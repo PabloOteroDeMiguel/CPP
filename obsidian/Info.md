@@ -53,3 +53,12 @@ For strings we use **std::getline( )**
 		[[input.cpp]]**
 
 ### <font style="color:yellow"> Building a Calculator (1:05:32)</font>
+
+### <font style="color:yellow"> Building a Mad Libs Game (1:09:28)</font>
+
+### <font style="color:yellow"> Arrays (1:13:47)</font>
+
+*Arrays can hold multiple data values*
+
+<font style="color:orange"> Example:</font>
+		[[arrays.cpp]]

@@ -89,12 +89,13 @@
   },
   "active": "9c2238d33a69d030",
   "lastOpenFiles": [
-    "input.cpp.md",
+    "files/arrays.cpp.md",
     "Info.md",
-    "numbers.cpp.md",
-    "strings.cpp.md",
+    "files/numbers.cpp.md",
+    "files/input.cpp.md",
+    "files/strings.cpp.md",
+    "files/variables.cpp.md",
     "string.cpp.md",
-    "variables.cpp.md",
     "Links.md",
     "Notes.md"
   ]
