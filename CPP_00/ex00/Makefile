@@ -1,0 +1,41 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: potero <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/08/14 17:31:34 by potero            #+#    #+#              #
+#    Updated: 2022/08/14 17:38:25 by potero           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRCS = megaphone.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+NAME = megaphone
+
+CC = clang++
+
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+
+%.o:%.cpp
+		$(CC) $(CFLAGS) -c  $< -o $(<:.cpp=.o)
+
+RM = rm -f
+
+$(NAME): $(OBJS)
+		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+all: $(NAME)
+
+clean:
+		$(RM) $(OBJS)
+
+fclean: clean
+		$(RM) $(NAME)
+
+re: fclean $(NAME)
+
+.PHONY: all clean fclean re
