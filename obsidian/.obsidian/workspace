@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "1ca1ab9d670a79bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c2238d33a69d030",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Info.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b6d3ac94c39780b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b537e9a74cba858",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2fe353cda6677f2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f79a0a7955691f9a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "97dc8ef731cd69ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "99174299c7c8866c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dac1d5b464eae5ab",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Info.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "9c2238d33a69d030",
+  "lastOpenFiles": [
+    "files/arrays.cpp.md",
+    "Info.md",
+    "files/numbers.cpp.md",
+    "files/input.cpp.md",
+    "files/strings.cpp.md",
+    "files/variables.cpp.md",
+    "string.cpp.md",
+    "Links.md",
+    "Notes.md"
+  ]
+}
