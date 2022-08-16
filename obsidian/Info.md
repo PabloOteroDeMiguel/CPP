@@ -65,3 +65,8 @@ For strings we use **std::getline( )**
 
 ### <font style="color:yellow"> Functions (1:20:03)</font>
 
+<font style="color:orange"> Example:</font>
+		[[functions.cpp]]
+		
+### <font style="color:yellow"> Return statement (1:29:46)</font>
+

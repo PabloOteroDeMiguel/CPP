@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Info.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,14 +89,15 @@
   },
   "active": "9c2238d33a69d030",
   "lastOpenFiles": [
-    "files/arrays.cpp.md",
+    "Links.md",
+    "files/functions.cpp.md",
     "Info.md",
+    "files/arrays.cpp.md",
+    "Notes.md",
     "files/numbers.cpp.md",
     "files/input.cpp.md",
     "files/strings.cpp.md",
     "files/variables.cpp.md",
-    "string.cpp.md",
-    "Links.md",
-    "Notes.md"
+    "string.cpp.md"
   ]
 }
