@@ -70,3 +70,10 @@ For strings we use **std::getline( )**
 		
 ### <font style="color:yellow"> Return statement (1:29:46)</font>
 
+<font style="color:orange"> Example:</font>
+		[[return.cpp]]
+
+### <font style="color:yellow"> If Statements (1:35:23)</font>
+
+<font style="color:orange"> Example:</font>
+	
