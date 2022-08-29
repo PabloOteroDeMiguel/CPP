@@ -76,4 +76,9 @@ For strings we use **std::getline( )**
 ### <font style="color:yellow"> If Statements (1:35:23)</font>
 
 <font style="color:orange"> Example:</font>
-	
+		[[ifStatement.cpp]]
+
+### <font style="color:yellow"> More if Statements (1:47:15)</font>
+
+<font style="color:orange"> Example:</font>
+		
