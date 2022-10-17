@@ -89,15 +89,15 @@
   },
   "active": "9c2238d33a69d030",
   "lastOpenFiles": [
-    "files/variables.cpp.md",
     "Links.md",
     "Notes.md",
+    "files/ifStatement.cpp.md",
     "Info.md",
-    "return.cpp.md",
+    "files/return.cpp.md",
+    "switch_statemments.cpp.md",
+    "files/variables.cpp.md",
     "files/input.cpp.md",
     "files/functions.cpp.md",
-    "files/strings.cpp.md",
-    "files/arrays.cpp.md",
-    "files/numbers.cpp.md"
+    "files/strings.cpp.md"
   ]
 }

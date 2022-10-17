@@ -50,7 +50,7 @@ ie:*
 For strings we use **std::getline( )** 
 
 <font style="color:orange"> Example:</font>
-		[[input.cpp]]**
+		[[input.cpp]]
 
 ### <font style="color:yellow"> Building a Calculator (1:05:32)</font>
 
@@ -67,7 +67,7 @@ For strings we use **std::getline( )**
 
 <font style="color:orange"> Example:</font>
 		[[functions.cpp]]
-		
+
 ### <font style="color:yellow"> Return statement (1:29:46)</font>
 
 <font style="color:orange"> Example:</font>
@@ -81,4 +81,41 @@ For strings we use **std::getline( )**
 ### <font style="color:yellow"> More if Statements (1:47:15)</font>
 
 <font style="color:orange"> Example:</font>
+		[[max_num.cpp]]
+
+### <font style="color:yellow"> Building a Better Calcualltor (1:56:01)</font>
+
+<font style="color:orange"> Example:</font>
+		[[better_calculator.cpp]]
+
+### <font style="color:yellow">Switch Statements (2:02:20)</font>
+
+<font style="color:orange"> Example:</font>
+		[[switch_statements.cpp]]
+
+### <font style="color:yellow">While Loops (2:10:47)</font>
+
+<font style="color:orange"> Example:</font>
+		[[while_loop.cpp]]
+
+### <font style="color:yellow"> Building a Guessing Game (2:18:53)</font>
+
+<font style="color:orange"> Example:</font>
+		[[guess_game.cpp]]
+
+### <font style="color:yellow"> For Loops (2:29:18)</font>
+
+<font style="color:orange"> Example:</font>
+		[[for_loop.cpp]]
+
+### <font style="color:yellow"> Exponent Function (2:39:34)</font>
+
+<font style="color:orange"> Example:</font>
+
+		[[exponent.cpp]]
+
+### <font style="color:yellow"> 2d Arrays & Nested Loops (2:45:18)</font>
+
+<font style="color:orange"> Example:</font>
+		[[2d.cpp]]
 		
