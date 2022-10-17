@@ -118,4 +118,15 @@ For strings we use **std::getline( )**
 
 <font style="color:orange"> Example:</font>
 		[[2d.cpp]]
-		
+
+### <font style="color:yellow"> Comments (2:54:56)</font>
+
+<font style="color:orange"> Example:</font>
+		[[coments.cpp]]
+
+### <font style="color:yellow"> Pointers (2:59:11)</font>
+
+<font style="color:orange"> Example:</font>
+		[[ponters.cpp]]
+
+### <font style="color:yellow"> Classes & Objectss (3:13:27)</font>

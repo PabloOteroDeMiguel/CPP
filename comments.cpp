@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2d.cpp                                             :+:      :+:    :+:   */
+/*   comments.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 13:46:08 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/17 15:38:45 by potero-d         ###   ########.fr       */
+/*   Created: 2022/10/17 15:40:08 by potero-d          #+#    #+#             */
+/*   Updated: 2022/10/17 15:45:47 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,15 @@
 
 int main() {
 
-	int grid [3][2] = {
-						{1, 2},
-						{3, 4},
-						{5, 6}
-					};
-	int	i;
-	int	j;
-	//std::cout << grid[1][1] << std::endl;
-
-	for (i = 0; i < 3; i++) {
-		for (j = 0; j < 2; j++) {
-			std::cout << grid[i][j] << std::endl;
-		}
-	}
+	//This is a comment.
 	
+	std::cout << "Comments"; //This is another comment.
+
+	/* This
+	is
+	a block
+	of 
+	comment*/
+
 	return (0);
 }
