@@ -139,3 +139,18 @@ For strings we use **std::getline( )**
 <font style="color:orange"> Example:</font>
 		[[constructor.cpp]]
 
+### <font style="color:yellow"> Objects Functions (3:34:42)</font>
+
+<font style="color:orange"> Example:</font>
+		[[object_function.cpp]]
+
+
+### <font style="color:yellow"> Gerrers & Setters (3:41:42)</font>
+
+<font style="color:orange"> Example:</font>
+		[[getter_setter.cpp]]
+
+### <font style="color:yellow"> Inheritance (3:54:056)</font>
+
+<font style="color:orange"> Example:</font>
+		[[inheritance.cpp]]
