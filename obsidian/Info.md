@@ -130,3 +130,12 @@ For strings we use **std::getline( )**
 		[[ponters.cpp]]
 
 ### <font style="color:yellow"> Classes & Objectss (3:13:27)</font>
+
+<font style="color:orange"> Example:</font>
+		[[classes_objects.cpp]]
+
+### <font style="color:yellow"> Constructor Functions (3:25:41)</font>
+
+<font style="color:orange"> Example:</font>
+		[[constructor.cpp]]
+
