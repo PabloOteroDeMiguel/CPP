@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:12:18 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 13:18:22 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:54:53 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 int		main(int argc, char **argv);
 void	init();
-bool	check_command(std::string command);
+bool	check_command(std::string command, Phonebook bananaphone);
+void	add(Phonebook bananaphone);
 
 #endif

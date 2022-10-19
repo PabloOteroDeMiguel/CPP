@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:43:33 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 13:19:04 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:03:32 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,13 @@
 
 class Phonebook {
 	public:
-		Contact	contacts[8];
+		Contact	contact[8];
+		int		index;
 
+		Phonebook (void);
+		~Phonebook (void);
+
+		void	startIndex();
 };
 
 #endif
