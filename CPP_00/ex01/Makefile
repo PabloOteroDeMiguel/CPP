@@ -6,15 +6,15 @@
 #    By: potero <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 09:40:47 by potero            #+#    #+#              #
-#    Updated: 2022/08/16 09:41:04 by potero           ###   ########.fr        #
+#    Updated: 2022/10/19 11:18:44 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 
+SRCS = bananaphone.cpp phonebook.cpp contacts.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = 
+NAME = bananaphone 
 
 CC = clang++
 
@@ -24,17 +24,26 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 		$(CC) $(CFLAGS) -c  $< -o $(<:.cpp=.o)
 
 RM = rm -f
+BLUE = \033[0;34m
+GREEN = \033[1;32m
+RED= \033[0;31m
+NORMAL = \033[0m
+
 
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		clear
+		@echo "$(GREEN) Phonebook ready to use $(NORMAL)"
 
 all: $(NAME)
 
 clean:
 		$(RM) $(OBJS)
+		@echo "$(RED)Phonebook closed$(NORMAL)"
 
 fclean: clean
 		$(RM) $(NAME)
+		@echo "$(RED)Phonebook closed$(NORMAL)"
 
 re: fclean $(NAME)
 

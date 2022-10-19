@@ -145,7 +145,7 @@ For strings we use **std::getline( )**
 		[[object_function.cpp]]
 
 
-### <font style="color:yellow"> Gerrers & Setters (3:41:42)</font>
+### <font style="color:yellow"> Getters & Setters (3:41:42)</font>
 
 <font style="color:orange"> Example:</font>
 		[[getter_setter.cpp]]
