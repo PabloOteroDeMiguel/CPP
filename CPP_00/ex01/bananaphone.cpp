@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:34:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 14:12:43 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:14:36 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	init() {
 	std::cout << "\\  )___/ ) _ (  )(_)(  )  (  )__) " << std::endl;
 	std::cout << "(____/(__)(__)(_)\\_)(__)(__)(_)\\_)(__)(_";
 	std::cout << "_)(__)  (_) (_)(_____)(_)\\_)(____)" << std::endl;
-	std::cout << "\033[0m";
+	std::cout << "\033[0m" << std::endl;
 }
 
-bool	check_command(std::string command, Phonebook bananaphone) {
+bool	check_command(std::string command, Phonebook &bananaphone) {
 
 	if (command == "ADD") {
 		std::cout << "You choose \033[1;32m(ADD).";
@@ -39,12 +39,12 @@ bool	check_command(std::string command, Phonebook bananaphone) {
 	else if (command == "EXIT") {
 		std::cout << "You choose \033[1;31m(EXIT).";
 		std::cout << "\033[0m" << std::endl;
+		return (true);
 	}
 	else {
 		std::cout << "Error\n Bad command, please repeat." << std::endl;
-		return (false);
 	}
-	return (true);
+	return (false);
 }
 
 int	main(int argc, char **argv) {
@@ -60,7 +60,12 @@ int	main(int argc, char **argv) {
 	else {
 		std::cout << "Error:\n Bad arguments." << std::endl;
 	}
-	command = "";
+	std::cout << "Choose an option: ";
+	std::cout << "\033[1;32m(ADD) ";
+	std::cout << "\033[1;33m(SEARCH) ";
+	std::cout << "\033[1;31m(EXIT)";
+	std::cout << "\033[0m" << std::endl;
+	std::cin >> command;
 	while (!check_command(command, bananaphone)) {
 		std::cout << "Choose an option: ";
 		std::cout << "\033[1;32m(ADD) ";
@@ -71,29 +76,13 @@ int	main(int argc, char **argv) {
 	}
 
 	std::cout << bananaphone.contact[0].first_name << std::endl;
+	std::cout << bananaphone.contact[1].first_name << std::endl;
+	std::cout << bananaphone.contact[2].first_name << std::endl;
+	std::cout << bananaphone.contact[3].first_name << std::endl;
+	std::cout << bananaphone.contact[4].first_name << std::endl;
+	std::cout << bananaphone.contact[5].first_name << std::endl;
+	std::cout << bananaphone.contact[6].first_name << std::endl;
+	std::cout << bananaphone.contact[7].first_name << std::endl;
 
 	return (0);
-}
-
-void	add(Phonebook bananaphone) {
-
-	std::string	first_name;
-	std::string	last_name;
-	std::string	nick_name;
-//	std::string	phone;
-//	std::string	secret;
-	int			index;
-
-	index = bananaphone.index;
-	if (bananaphone.index == 7) {
-		std::cout << "Memory full. Deleting oldest contact..." << std::endl;
-	}
-	std::cout << "First name: ";
-	std::cin >> first_name;
-	std::cout << "Last name: ";
-	std::cin >> last_name;
-	std::cout << "Nickname: ";
-	std::cin >> nick_name;
-	//bananaphone.contact[index](first_name, last_name, nick_name);
-	bananaphone.index++;
 }
