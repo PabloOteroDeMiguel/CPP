@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:34:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 14:03:38 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:12:43 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,10 @@ void	add(Phonebook bananaphone) {
 	}
 	std::cout << "First name: ";
 	std::cin >> first_name;
-	std::cout << "Lasr name: ";
+	std::cout << "Last name: ";
 	std::cin >> last_name;
 	std::cout << "Nickname: ";
 	std::cin >> nick_name;
-	bananaphone.contact[index](first_name, last_name, nick_name);
+	//bananaphone.contact[index](first_name, last_name, nick_name);
 	bananaphone.index++;
 }
