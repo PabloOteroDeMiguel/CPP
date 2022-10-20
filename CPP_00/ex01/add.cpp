@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:11:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 16:14:37 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:19:15 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,11 @@ void	add(Phonebook &bananaphone) {
 
 	std::cout << "Darkest secret: ";
 	std::cin >> secret;
+	bananaphone.contact[index].setSecret(secret);
 
+	if (bananaphone.num_contacts < 8) {
+		bananaphone.num_contacts++;
+	}
 	bananaphone.contact[index].setIndex(index + 1);
 	bananaphone.index++;
 }

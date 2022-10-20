@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:42:21 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 13:39:35 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:52:53 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,8 @@ Phonebook::~Phonebook (void)
 void	Phonebook::startIndex() {
 	this->index = 0;
 }
+
+void	Phonebook::setNumContacts() {
+	this->num_contacts = 0;
+}
+

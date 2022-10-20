@@ -6,11 +6,11 @@
 #    By: potero <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/16 09:40:47 by potero            #+#    #+#              #
-#    Updated: 2022/10/19 16:11:24 by potero-d         ###   ########.fr        #
+#    Updated: 2022/10/20 12:28:13 by potero           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = bananaphone.cpp phonebook.cpp contacts.cpp add.cpp
+SRCS = bananaphone.cpp phonebook.cpp contacts.cpp add.cpp search.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

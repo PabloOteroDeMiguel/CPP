@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bananaphone.h                                      :+:      :+:    :+:   */
+/*   bananaphone.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:12:18 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 16:12:51 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:07:38 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <ostream>
 #include <iostream>
 #include <cctype>
+#include <stdlib.h>
 #include "contacts.hpp"
 #include "phonebook.hpp"
 
@@ -28,5 +29,11 @@ bool	check_command(std::string command, Phonebook &bananaphone);
 /*ADD*/
 void	add(Phonebook &bananaphone);
 bool	valid_phone(std::string phone);
+
+/*SEARCH*/
+void	print_name(std::string name);
+void	search(Phonebook &bananaphone);
+bool	enter_index(Phonebook &bananaphone, std::string enter);
+void	print_contact(int index, Phonebook &bananaphone);
 
 #endif

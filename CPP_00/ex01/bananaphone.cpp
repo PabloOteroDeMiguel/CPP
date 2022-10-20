@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:34:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/19 16:14:36 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:02:52 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ bool	check_command(std::string command, Phonebook &bananaphone) {
 	else if (command == "SEARCH") {
 		std::cout << "You choose \033[1;33m(SEARCH).";
 		std::cout << "\033[0m" << std::endl;
+		search(bananaphone);
 	}
 	else if (command == "EXIT") {
 		std::cout << "You choose \033[1;31m(EXIT).";
@@ -56,9 +57,11 @@ int	main(int argc, char **argv) {
 	if (argc == 1) {
 		init();
 		bananaphone.startIndex();
+		bananaphone.setNumContacts();
 	}
 	else {
 		std::cout << "Error:\n Bad arguments." << std::endl;
+		return (0);
 	}
 	std::cout << "Choose an option: ";
 	std::cout << "\033[1;32m(ADD) ";
@@ -74,15 +77,6 @@ int	main(int argc, char **argv) {
 		std::cout << "\033[0m" << std::endl;
 		std::cin >> command;
 	}
-
-	std::cout << bananaphone.contact[0].first_name << std::endl;
-	std::cout << bananaphone.contact[1].first_name << std::endl;
-	std::cout << bananaphone.contact[2].first_name << std::endl;
-	std::cout << bananaphone.contact[3].first_name << std::endl;
-	std::cout << bananaphone.contact[4].first_name << std::endl;
-	std::cout << bananaphone.contact[5].first_name << std::endl;
-	std::cout << bananaphone.contact[6].first_name << std::endl;
-	std::cout << bananaphone.contact[7].first_name << std::endl;
 
 	return (0);
 }
