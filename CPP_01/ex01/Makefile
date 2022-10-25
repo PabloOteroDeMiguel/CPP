@@ -6,11 +6,11 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 10:37:46 by potero-d          #+#    #+#              #
-#    Updated: 2022/10/25 15:19:57 by potero-d         ###   ########.fr        #
+#    Updated: 2022/10/25 15:19:03 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS = Zombie.cpp main.cpp ZombieHorde.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -32,7 +32,7 @@ NORMAL = \033[0m
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		clear
-		@echo "$(GREEN)Carefull with the ZombiEs$(NORMAL)"
+		@echo "$(GREEN)Carefull with tHe ZombiEs$(NORMAL)"
 
 all: $(NAME)
 
