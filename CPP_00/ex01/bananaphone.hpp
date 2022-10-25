@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BANANAPHONE_H
-# define BANANAPHONE_H
+#ifndef BANANAPHONE_HPP
+# define BANANAPHONE_HPP
 
 #include <ostream>
 #include <iostream>

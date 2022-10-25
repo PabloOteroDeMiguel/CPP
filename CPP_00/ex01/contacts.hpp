@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#ifndef CONTACTS_HPP
+# define CONTACTS_HPP
 
 #include "bananaphone.hpp"
 
