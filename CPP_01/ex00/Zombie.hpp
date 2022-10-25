@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:18:49 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/25 11:49:55 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:08:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@ class Zombie {
 		~Zombie(void);
 		void	announce(void);
 		std::string	getName(void);
-	//	Zombie* newZombie(std::string name);
 
 	private:
 		std::string	_name;	
 };
 
-
-//Mirar new c++
+Zombie*	newZombie(std::string name); 
+void	randomChump(std::string name);
 
 #endif
