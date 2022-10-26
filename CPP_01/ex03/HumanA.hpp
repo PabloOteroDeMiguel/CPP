@@ -6,8 +6,16 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 21:29:13 by potero            #+#    #+#             */
-/*   Updated: 2022/10/25 21:29:15 by potero           ###   ########.fr       */
+/*   Updated: 2022/10/26 10:58:14 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
+#include <ostream>
+#include <iostream>
+
+class 
+
+#endif
