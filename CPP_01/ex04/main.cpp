@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:36:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/26 17:10:20 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/26 22:04:10 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 int	main(int argc, char **argv) {
 
 	int 			i;
-	int				cont;
 	std::string		s1;
 	std::string		s2;
 	int				length_buffer;
 	int				length;
 	int				s1_lenght;
+	int				s2_lenght;
 	std::size_t		found;
 	std::fstream	fs;
 	std::string		new_file;
@@ -39,6 +39,7 @@ int	main(int argc, char **argv) {
 	s2 = argv[3];
 
 	s1_lenght = s1.length();
+	s2_lenght = s2.length();
 	std::cout << "String for search: " << s1 << std::endl;
 	std::cout << "Replace string: " << s2 << std::endl;
 	std::cout << "s1_lenght: " << s1_lenght << std::endl;
@@ -58,12 +59,13 @@ int	main(int argc, char **argv) {
 
 	std::cout.write (buffer,length_buffer);
 	std::cout << "----------------" << std::endl;
+/*
 	std::cout << buffer[0] << std::endl;
 	std::cout << buffer[1] << std::endl;
 	std::cout << length_buffer << std::endl;
 	std::cout << length << std::endl;
 	std::cout << "----------------" << std::endl;
-
+*/
 	i = 0;
 	while (i < length) {
 
@@ -71,21 +73,17 @@ int	main(int argc, char **argv) {
 		i++;
 	}
 	copy[i] = 0;
-	std::cout << copy << std::endl;
-	std::cout << "exit" << std::endl;
-	std::cout << "----------------" << std::endl;
-
-	cont = 0;
 	new_file = "test";
 	fs.open (new_file, std::fstream::in | std::fstream::out | std::fstream::app);
 	found = copy.find(s1);
 	while (found != std::string::npos) {
 
-		fs << copy.substr(cont, found);
+		fs << copy.substr(0, found);
 		fs << s2;
-		found = copy.find(s1, found + 1);
+		copy = copy.substr(found + s1_lenght, length);
+		found = copy.find(s1);
 	}
-
+	fs << copy;
 	fs.close();
 
 	delete[] buffer;
