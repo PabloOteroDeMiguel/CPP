@@ -6,11 +6,11 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 10:37:46 by potero-d          #+#    #+#              #
-#    Updated: 2022/10/26 15:41:55 by potero-d         ###   ########.fr        #
+#    Updated: 2022/10/26 22:23:13 by potero           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp 
+SRCS = main.cpp utils.cpp 
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = replace
