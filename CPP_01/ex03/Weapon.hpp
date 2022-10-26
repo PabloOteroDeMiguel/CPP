@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 21:28:48 by potero            #+#    #+#             */
-/*   Updated: 2022/10/26 12:02:43 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:34:31 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@
 
 class Weapon {
 	public:
-		Weapon(void);
-		~Weapon(void)
+		Weapon(std::string str);
+		~Weapon(void);
 		std::string getType(void);
-		std::string setType(std:string str);
+		void		setType(std::string str);
 
 	private:
 		std::string	_type;
 };
+
+#endif

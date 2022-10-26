@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 21:29:13 by potero            #+#    #+#             */
-/*   Updated: 2022/10/26 12:11:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:40:27 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 #include <iostream>
 #include "Weapon.hpp"
 
+class Weapon;
+
 class HumanA {
+
 	public:
 		HumanA(std::string name, Weapon& weapon_type);
 		~HumanA(void);
 		void		attack();
-		std::string	getName();
 		std::string	getWeapon();
 
 	private:
