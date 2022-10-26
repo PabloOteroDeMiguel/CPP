@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:59:49 by potero            #+#    #+#             */
-/*   Updated: 2022/10/24 13:12:26 by potero           ###   ########.fr       */
+/*   Updated: 2022/10/26 10:06:01 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,10 +97,10 @@ int	Account::getNbWithdrawals(void) {
 void	Account::displayStatus( void ) const {
 
 	Account::_displayTimestamp();
-	std::cout << "index: " <<  this->_accountIndex << ";";
+	std::cout << "index:" <<  this->_accountIndex << ";";
 	std::cout << "amount:" << Account::checkAmount() << ";";
 	std::cout << "deposits:" << this->_nbDeposits << ";";
-	std::cout << "withdrawls:" << this->_nbWithdrawals << std::endl;
+	std::cout << "withdrawals:" << this->_nbWithdrawals << std::endl;
 
 }
 void	Account::displayAccountsInfos(void) {
