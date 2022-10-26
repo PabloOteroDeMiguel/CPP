@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 21:28:26 by potero            #+#    #+#             */
-/*   Updated: 2022/10/26 14:06:10 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:30:04 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,10 @@ int	main() {
 		club.setType("some other type of club");
 		jim.attack();
 	}
+
+//	HumanA tom("Tom"); Siempre tiene que estar armado
+
+	HumanB tom("Tom");
+	tom.attack();
 	return (0);
 }
