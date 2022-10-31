@@ -6,11 +6,12 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:49:58 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/31 11:53:47 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/10/31 12:28:30 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include<iostream>
+#include<ostream>
 
 #ifndef KAREN_HPP
 #define KAREN_HPP
