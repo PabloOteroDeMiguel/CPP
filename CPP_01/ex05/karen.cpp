@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:49:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/31 17:05:19 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/01 10:29:51 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ std::string Karen::getName(void){
 void	Karen::test(std::string str){
 
 	std::cout << "Karen is talking some "<< str << std::endl;
+}
+
+void	Karen::test2(std::string str){
+
+	std::cout << "Karen is talking some other "<< str << std::endl;
 }

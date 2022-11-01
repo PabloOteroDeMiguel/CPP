@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:49:58 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/31 17:02:01 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/01 10:29:49 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class	Karen {
 		void		setName(std::string);
 		std::string	getName(void);
 		void		test(std::string str);
+		void		test2(std::string str);
 
 	private:
 		std::string	_name;
@@ -34,5 +35,8 @@ class	Karen {
 		void		warning( void );
 		void		error( void );
 };
+
+typedef	void (Karen::* pntr2)(std::string);
+//typedef	void (Karen::* pntr)(std::string);
 
 #endif
