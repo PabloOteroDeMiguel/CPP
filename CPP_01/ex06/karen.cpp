@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:49:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/01 11:44:42 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/01 12:24:18 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,30 +72,24 @@ void	Karen::what(void) {
 
 
 
-void	Karen::complain(std::string level) {
+void	Karen::complain(int level) {
 
-	pointer 	comment[5];
-	std::string lvl[4];
-	int			idx;
-	std::string	order;
+	pointer	lvl[5];
 
-	comment[0] = &Karen::debug;
-	comment[1] = &Karen::info;
-	comment[2] = &Karen::warning;
-	comment[3] = &Karen::error;
-	comment[4] = &Karen::what;
+	lvl[0] = &Karen::debug;
+	lvl[1] = &Karen::info;
+	lvl[2] = &Karen::warning;
+	lvl[3] = &Karen::error;
+	lvl[4] = &Karen::what;
 
-	lvl[0] = "DEBUG";
-	lvl[1] = "INFO";
-	lvl[2] = "WARNING";
-	lvl[3] = "ERROR";
 
-	idx = 0;
-	while (idx < 4)
-	{
-		if (lvl[idx] == level)
-			break;
-		idx++;
+	switch(level) {
+		case 0: (this->*lvl[0])();
+		case 1: (this->*lvl[1])();
+		case 2: (this->*lvl[2])();
+		case 3: (this->*lvl[3])();
+		break;
+		default: (this->*lvl[4])();
 	}
-	(this->*comment[idx])();
+
 }

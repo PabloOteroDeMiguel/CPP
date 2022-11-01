@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:49:58 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/01 11:44:43 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/01 12:24:21 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Karen {
 	public:
 		Karen(void);
 		~Karen(void);
-		void		complain(std::string level);
+		void		complain(int level);
 		void		setName(std::string);
 		std::string	getName(void);
 		void		test(std::string str);
