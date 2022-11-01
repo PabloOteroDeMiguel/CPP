@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 21:07:11 by potero            #+#    #+#             */
-/*   Updated: 2022/10/25 21:21:08 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:27:34 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main() {
 	str = "HI THIS IS BRAIN";
 	std::cout << str << std::endl;
 	stringPTR = &str;
-	std::cout << "Pointer: " << stringPTR << std::endl;
-	std::cout << "Reference: "<< stringREF << std::endl;
+	std::cout << "stringPTR-> Pointer: " << stringPTR << std::endl;
+	std::cout << "stringRef-> Reference: "<< stringREF << std::endl;
 	return (0);	
 }
