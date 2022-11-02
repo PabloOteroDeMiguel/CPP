@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:36:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/10/26 22:52:31 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/02 09:49:55 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(int argc, char **argv) {
 	int				length_buffer;
 	int				s1_lenght;
 	std::size_t		found;
+	std::fstream	file;
 	std::fstream	fs;
 	std::string		new_file;
 	std::string		copy;
@@ -38,6 +39,12 @@ int	main(int argc, char **argv) {
 	std::cout << "Replace string: " << s2 << std::endl;
 	std::cout << "---------------------" << std::endl;
 
+	file.open(argv[1], std::fstream::in | std::fstream::out);
+	if (file.fail()) {
+		std::cout << "Error:\nBad file." << std::endl;
+		return (0);
+	}
+	file.close(); 
 	std::ifstream fd (argv[1], std::ifstream::binary);
 	// get length of file:
 	fd.seekg (0, fd.end);
