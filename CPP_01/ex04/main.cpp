@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:36:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/02 09:49:55 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/02 09:52:19 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,10 @@ int	main(int argc, char **argv) {
 	fd.read(buffer, length_buffer);
 	fd.close();
 
-	std::cout.write (buffer, length_buffer);
-	std::cout << "----------------" << std::endl;
+//	std::cout.write (buffer, length_buffer);
+//	std::cout << "----------------" << std::endl;
 
 	copy = char_to_string(buffer, length_buffer);
-//	new_file = "test";
 	new_file = new_file_name(argv[1]);
 
 	fs.open (new_file, std::fstream::in | std::fstream::out | std::fstream::app);
