@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:56 by potero            #+#    #+#             */
-/*   Updated: 2022/11/07 21:48:15 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/07 22:22:27 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Fixed::~Fixed(void) {
 }
 int Fixed::getRawBits( void ) const{
 
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_int_p);
 }
 
@@ -50,4 +49,34 @@ Fixed&	Fixed::operator=(const Fixed & rhs){
 		this->_int_p = rhs.getRawBits();
 	}
 	return (*this);
+}
+
+Fixed::Fixed(int const num) {
+
+	std::cout << "Int constructor called" << std::endl;
+	setRawBits(num * (1<<this->_bits));
+	return;
+}
+
+Fixed::Fixed(float const num) {
+
+	std::cout << "Float constructor called" << std::endl;
+	setRawBits(num * (1<<this->_bits));
+	return;
+}
+
+std::ostream& operator<<(std::ostream& out, const Fixed &foo) {
+
+	out << foo.toFloat();
+	return (out);
+}
+
+float	Fixed::toFloat(void) const {
+
+	return ((getRawBits() / (float)(1<<this->_bits)));
+//	return ((getRawBits() * (float)(1>>this->_bits)));
+}
+
+int	Fixed::toInt(void) const {
+	return ((getRawBits() / (1<<this->_bits)));
 }
