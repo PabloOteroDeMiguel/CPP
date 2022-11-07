@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:45 by potero            #+#    #+#             */
-/*   Updated: 2022/11/03 17:00:08 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/07 12:15:04 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Fixed {
 				Fixed(void);
 				Fixed(const Fixed& cpy);
 				~Fixed(void);
+				Fixed &	operator=(Fixed & 	rhs);
 				int getRawBits(void) const;
 	private:
 				int	_int_p;
