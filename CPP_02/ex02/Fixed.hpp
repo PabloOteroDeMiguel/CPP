@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:45 by potero            #+#    #+#             */
-/*   Updated: 2022/11/07 22:21:51 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/08 10:50:36 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include<iostream>
 #include<ostream>
+#include<cmath>
 
 class Fixed {
 
@@ -29,6 +30,10 @@ class Fixed {
 				void	setRawBits(int const raw);
 				float	toFloat(void) const;
 				int		toInt(void) const;
+
+				/*comparison operators*/
+				bool	operator<(const Fixed &foo) const;
+				bool	operator>(const Fixed &foo) const;
 
 	private:
 				int	_int_p;
