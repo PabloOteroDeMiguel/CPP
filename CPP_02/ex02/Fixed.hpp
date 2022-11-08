@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:45 by potero            #+#    #+#             */
-/*   Updated: 2022/11/08 10:50:36 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:48:47 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,28 @@ class Fixed {
 				/*comparison operators*/
 				bool	operator<(const Fixed &foo) const;
 				bool	operator>(const Fixed &foo) const;
+				bool	operator<=(const Fixed &foo) const;
+				bool	operator>=(const Fixed &foo) const;
+				bool	operator==(const Fixed &foo) const;
+				bool	operator!=(const Fixed &foo) const;
+
+				/*arithmetic operators*/
+				Fixed	operator+(const Fixed &foo);
+				Fixed	operator-(const Fixed &foo);
+				Fixed	operator*(const Fixed &foo);
+				Fixed	operator/(const Fixed &foo);
+
+				/*++--*/
+				Fixed	operator++();
+				Fixed	operator++(int);
+				Fixed	operator--();
+				Fixed	operator--(int);
+
+				/*max--min*/
+				const Fixed&	max(const Fixed &foo1, const Fixed &foo2);
+				Fixed&			max(Fixed &foo1, Fixed &foo2);
+				const Fixed&	min(const Fixed &foo1, const Fixed &foo2);
+				Fixed&			min(Fixed &foo1, Fixed &foo2);
 
 	private:
 				int	_int_p;
