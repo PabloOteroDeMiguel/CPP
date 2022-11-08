@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:56 by potero            #+#    #+#             */
-/*   Updated: 2022/11/07 22:22:27 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:33:13 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ Fixed&	Fixed::operator=(const Fixed & rhs){
 	return (*this);
 }
 
+/*----ex01----*/
+
 Fixed::Fixed(int const num) {
 
 	std::cout << "Int constructor called" << std::endl;
@@ -78,5 +80,6 @@ float	Fixed::toFloat(void) const {
 }
 
 int	Fixed::toInt(void) const {
+
 	return ((getRawBits() / (1<<this->_bits)));
 }
