@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:56 by potero            #+#    #+#             */
-/*   Updated: 2022/11/07 21:48:15 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:23:54 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Fixed::~Fixed(void) {
 	std::cout << "Destructor called" << std::endl;
 	return;
 }
+
 int Fixed::getRawBits( void ) const{
 
 	std::cout << "getRawBits member function called" << std::endl;

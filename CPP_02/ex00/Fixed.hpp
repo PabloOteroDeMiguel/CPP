@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:05:45 by potero            #+#    #+#             */
-/*   Updated: 2022/11/07 21:48:17 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:24:01 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed {
 				void	setRawBits(int const raw);
 	private:
 				int	_int_p;
-				static int const _bits = 8
+				static int const _bits = 8;
 
 };
 
