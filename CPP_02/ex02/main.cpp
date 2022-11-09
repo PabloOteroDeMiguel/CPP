@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:06:06 by potero            #+#    #+#             */
-/*   Updated: 2022/11/08 16:48:45 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/09 09:26:24 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	main(void) {
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
 /*
 	Fixed const	a(42.43f);
 	Fixed 		b;
