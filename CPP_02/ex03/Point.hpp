@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:58:27 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/10 11:47:58 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 12:50:48 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Point {
 
 	private:
 		Fixed const *_x;
-		Fixed const *_y;	
-
+		Fixed const *_y;
 };
+
+
+bool	bsp( Point const a, Point const b, Point const c, Point const point);

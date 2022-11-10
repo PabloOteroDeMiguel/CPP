@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:58:37 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/10 11:47:56 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 12:53:49 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Point::Point(float const x, float const y) {
 
 const Point&	Point::operator=(const Point& rhs) {
 
-	std::cout << "Assigment called" << std::endl;
+//	std::cout << "Assigment called" << std::endl;
 	if (this != &rhs) {
 		this->_x = new Fixed(*rhs.getX());
 		this->_y = new Fixed(*rhs.getY());
