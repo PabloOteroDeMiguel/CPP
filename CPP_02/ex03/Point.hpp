@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:58:27 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/09 10:58:31 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:47:58 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ class Point {
 
 	public:
 		Point(void);
-		Point(const Fixed &x, const Fixed &y);
+		Point(float const x, float const y);
 		Point(const Point& cpy);
 		~Point(void);
 
-	//	Point&		operator=(Point & rhs);
-		Fixed const	getX(void); 
-		Fixed const	getY(void); 
+		const Point&		operator=(const Point & rhs);
+		const Fixed*		getX(void) const; 
+		const Fixed*		getY(void) const; 
 
 	private:
-		Fixed const _x;
-		Fixed const	_y;
+		Fixed const *_x;
+		Fixed const *_y;	
 
 };

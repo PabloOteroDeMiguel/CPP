@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:58:37 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/09 10:58:32 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:47:56 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 Point::Point(void) {
 
-	this->_x = 0;
-	this->_y = 0;
+	this->_x = new Fixed(0);
+	this->_y = new Fixed(0);
 	return;
 }
 
 Point::~Point(void) {
 
+	delete _x;
+	delete _y;
 	return;
 }
 
@@ -31,28 +33,29 @@ Point::Point(const Point& cpy) {
 	return;
 }
 
-Point::Point(const Fixed &x, const Fixed &y) {
+Point::Point(float const x, float const y) {
 
-	this->_x = x.toFloat();
-	this->_y = y.toFloat();
+	this->_x = new Fixed(x);
+	this->_y = new Fixed(y);
 	return;
 }
-/*
-Point&	Point::operator=(Point & rhs) {
 
+const Point&	Point::operator=(const Point& rhs) {
+
+	std::cout << "Assigment called" << std::endl;
 	if (this != &rhs) {
-		this->_x = rhs.getX();
-		this->_y = rhs.getY();
+		this->_x = new Fixed(*rhs.getX());
+		this->_y = new Fixed(*rhs.getY());
 	}
 	return (*this);
 }
-*/
-Fixed const Point::getX(void) {
+
+const Fixed* Point::getX(void) const {
 
 	return (this->_x);
 }
 
-Fixed const Point::getY(void) {
+const Fixed* Point::getY(void) const {
 
 	return (this->_y);
 }
