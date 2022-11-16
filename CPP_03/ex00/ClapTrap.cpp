@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:59 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/15 13:29:38 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/16 11:55:13 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ int	ClapTrap::getEnergyPoints() {
 	return (this->_energy_points);
 }
 
+void	ClapTrap::setEnergyPoints(unsigned int amount) {
+
+	this->_enegy_points -= amount;
+}
+
 int	ClapTrap::getAttackDamage() {
 
 	return (this->_attack_damage);
@@ -78,4 +83,43 @@ ClapTrap&	ClapTrap::operator=(ClapTrap& rhs){
 		this->_attack_damage = getAttackDamage();
 	}
 	return (*this);
+
+/*++++++++ACTIONS++++++++*/
+
+int	ClapTrap::isDead() {
+
+	if (this->getEnergyPoints() < 0) {
+		std::cout << "ClapTrap " << this->getName();
+		std::cout << " is dead, shouldn't try to move." << std::endl;
+		return (1);
+	}
+	return(0);
+}
+
+void	ClapTrap::attack(std::string const & target) {
+
+	if (!this->idDead()) { 
+		std::cout << "ClapTrap " << this->getName() << "attack";
+		std::cout << target << ", with a dirty move, causing ";
+		std::cout <<  this->getHitpoints() <<  " points of damage!" << std::endl;
+	}
+}
+
+void	ClapTrap::takeDamage(unsigned int amount) {
+
+	std::cout << "ClapTrap " << this->getName() << "is attacked, getting";
+	std::cout << amount << " points of damage." << std::endl;
+	this->setEnergyPoints(amount);
+	
+	if (this->getEnergyPoints() < 0)
+		std::cout << "ClapTrap " << this->getName() << "should be dead." << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount) {
+
+	std::cout << "ClapTrap " << this->getName() << " is healed ";
+	std::cout << amount << " points." << std::endl;
+
+	
+
 }
