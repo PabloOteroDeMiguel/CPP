@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:54 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/16 11:37:24 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/17 16:13:23 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,16 @@ class ClapTrap {
 		ClapTrap(ClapTrap& cpy);
 
 		std::string	getName();
-		int	getHitpoints();
-		int	getEnergyPoints();
-		int	getAttackDamage();
-		
-		void attack(std::string const & target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		int		getHitpoints();
+		int		getEnergyPoints();
+		int		getAttackDamage();
+		void	setEnergyPoints(unsigned int amount);
+		void	setHealedPoints(unsigned int amount);
+
+		void 	attack(std::string const & target);
+		void 	takeDamage(unsigned int amount);
+		void 	beRepaired(unsigned int amount);
+		int		isDead();
 
 	private:
 		std::string	_name;
