@@ -6,19 +6,19 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/17 16:16:58 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/17 17:21:29 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-
+/*
 	ClapTrap Yo("Viernes");
 	ClapTrap Tu;
 	ClapTrap El("Lunes");
 
-//	Tu("Jueves");
 	Yo.attack("Lunes");
 	El.takeDamage(10);
 	El.attack("Viernes");
@@ -28,4 +28,6 @@ int	main(void) {
 	Yo.beRepaired(10);
 	std::cout << Yo.getName() << " has " << Yo.getEnergyPoints(); 
 	std::cout << " energy points." << std::endl;
+*/
+	ScavTrap Miercoles("Miercoles");
 }
