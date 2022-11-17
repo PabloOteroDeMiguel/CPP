@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:59 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/17 16:12:43 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/17 16:27:38 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ClapTrap::ClapTrap(void) {
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 
+	std::cout << "ClapTrap " << this->_name << "." << std::endl;
 	return;
 }
 
@@ -30,13 +31,14 @@ ClapTrap::ClapTrap(std::string name) {
 	this->_hitpoints = 10;
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
+	std::cout << "ClapTrap " << name << " welcome!" << std::endl;
 
 	return;
 }
 
 ClapTrap::~ClapTrap(void) {
 
-	std::cout << "Destrcutor called" << std::endl;
+	std::cout << "Destrcutor called." << std::endl;
 	return;
 }
 
