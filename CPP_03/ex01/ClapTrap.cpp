@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:59 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/17 16:46:25 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/18 12:41:10 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ ClapTrap::ClapTrap(void) {
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 
-	std::cout << "ClapTrap " << this->_name << "." << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "ClapTrap " << this->_name << ".";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
@@ -30,14 +32,19 @@ ClapTrap::ClapTrap(std::string name) {
 	this->_hitpoints = 10;
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
-	std::cout << "ClapTrap " << name << " welcome!" << std::endl;
+
+	std::cout << "\033[1;32m";
+	std::cout << "ClapTrap " << name << " welcome!";
+	std::cout << "\033[0m" << std::endl;
 
 	return;
 }
 
 ClapTrap::~ClapTrap(void) {
 
-	std::cout << "Destrcutor called." << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "ClapTrap " << this->_name << " destrcutor called.";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
@@ -99,8 +106,10 @@ ClapTrap&	ClapTrap::operator=(ClapTrap& rhs){
 int	ClapTrap::isDead() {
 
 	if (this->getEnergyPoints() <= 0) {
+		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName();
-		std::cout << " is dead, shouldn't try to move." << std::endl;
+		std::cout << " is dead, shouldn't try to move.";
+		std::cout << "\033[0m" << std::endl;
 		return (1);
 	}
 	return(0);
@@ -109,29 +118,35 @@ int	ClapTrap::isDead() {
 void	ClapTrap::attack(std::string const & target) {
 
 	if (!this->isDead()) { 
+		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " attack ";
 		std::cout << target << ", with a dirty move, causing ";
-		std::cout <<  this->getHitpoints() <<  " points of damage!" << std::endl;
+		std::cout <<  this->getHitpoints() <<  " points of damage!";
+		std::cout << "\033[0m" << std::endl;
 	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
 
 	if (!this->isDead()) { 
+		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " is attacked, getting ";
-		std::cout << amount << " points of damage." << std::endl;
+		std::cout << amount << " points of damage.";
 		this->setEnergyPoints(amount);
 	
 		if (this->getEnergyPoints() <= 0)
-			std::cout << "ClapTrap " << this->getName() << " should be dead." << std::endl;
+			std::cout << "\nClapTrap " << this->getName() << " should be dead.";
+	std::cout << "\033[0m" << std::endl;
 	}	
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 
 	if (!this->isDead()) { 
+		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " is healed ";
-		std::cout << amount << " points." << std::endl;
+		std::cout << amount << " points.";
+		std::cout << "\033[0m" << std::endl;
 		this->setHealedPoints(amount);
 	}
 }
