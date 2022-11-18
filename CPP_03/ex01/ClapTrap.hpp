@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:54 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/17 16:13:23 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:02:16 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ClapTrap {
 		void 	beRepaired(unsigned int amount);
 		int		isDead();
 
-	private:
+	protected:
 		std::string	_name;
 		int			_hitpoints;
 		int			_energy_points;
