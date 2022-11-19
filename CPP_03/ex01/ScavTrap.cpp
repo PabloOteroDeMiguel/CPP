@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:42:24 by potero            #+#    #+#             */
-/*   Updated: 2022/11/18 12:41:12 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:22:00 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,12 @@ ScavTrap::~ScavTrap(void) {
 	std::cout << "ScavTrap " << this->_name << " destuctor called.";
 	std::cout << "\033[0m" << std::endl;
 	return;
+}
+
+void	ScavTrap::guardGate() {
+
+	std::cout << "\033[1;35m";
+	std::cout << "ScavTrap " << this->getName();
+	std::cout << " has enterred in Gate keeper mode.";
+	std::cout << "\033[0m" << std::endl;
 }

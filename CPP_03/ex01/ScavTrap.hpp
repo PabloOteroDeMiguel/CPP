@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:42:39 by potero            #+#    #+#             */
-/*   Updated: 2022/11/18 12:10:28 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:18:00 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class ScavTrap : ClapTrap {
 		ScavTrap(void);		
 		~ScavTrap(void);		
 		ScavTrap(std::string name);		
+
+		void guardGate();
 };
 
 #endif
