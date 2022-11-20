@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:42:39 by potero            #+#    #+#             */
-/*   Updated: 2022/11/19 17:18:00 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/20 19:00:34 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-class ScavTrap : ClapTrap {
+class ScavTrap : public ClapTrap {
 	
 	public:
 

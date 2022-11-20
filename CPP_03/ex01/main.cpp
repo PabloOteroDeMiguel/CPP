@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/19 17:20:25 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/20 18:58:44 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ int	main(void) {
 	std::cout << " energy points." << std::endl;
 
 	ScavTrap Miercoles("Miercoles");
+	ScavTrap Jueves("Jueves");
 //	ScavTrap Martes(Miercoles);
 //	Martes.guardGate();
 	Miercoles.guardGate();
+	Jueves.attack("Miercoles");
+	Miercoles.takeDamage(20);
 //	Martes(Miercoles);
 }
