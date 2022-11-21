@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/20 18:58:44 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/21 11:48:24 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(void) {
 	std::cout << "Lunes try be repaired:" << std::endl;
 	Lunes.beRepaired(10);
 	Viernes.takeDamage(5);
+	Viernes.beRepaired(10);
 	Viernes.beRepaired(10);
 	std::cout << Viernes.getName() << " has " << Viernes.getEnergyPoints(); 
 	std::cout << " energy points." << std::endl;

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:59 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/18 12:41:10 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/21 11:47:52 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,16 @@ void	ClapTrap::setEnergyPoints(unsigned int amount) {
 	this->_energy_points -= amount;
 }
 
+void	ClapTrap::setHitPoints(unsigned int amount) {
+
+	this->_hitpoints -= amount;
+}
+
 void	ClapTrap::setHealedPoints(unsigned int amount) {
 
-	this->_energy_points += amount;
-	if (this->_energy_points > 10) {
-		this->_energy_points = 10;
+	this->_hitpoints += amount;
+	if (this->_hitpoints > 10) {
+		this->_hitpoints = 10;
 	}
 }
 
@@ -105,7 +110,7 @@ ClapTrap&	ClapTrap::operator=(ClapTrap& rhs){
 
 int	ClapTrap::isDead() {
 
-	if (this->getEnergyPoints() <= 0) {
+	if (this->getHitpoints() <= 0) {
 		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName();
 		std::cout << " is dead, shouldn't try to move.";
@@ -121,7 +126,7 @@ void	ClapTrap::attack(std::string const & target) {
 		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " attack ";
 		std::cout << target << ", with a dirty move, causing ";
-		std::cout <<  this->getHitpoints() <<  " points of damage!";
+		std::cout <<  this->getAttackDamage() <<  " points of damage!";
 		std::cout << "\033[0m" << std::endl;
 	}
 }
@@ -132,9 +137,9 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " is attacked, getting ";
 		std::cout << amount << " points of damage.";
-		this->setEnergyPoints(amount);
+		this->setHitPoints(amount);
 	
-		if (this->getEnergyPoints() <= 0)
+		if (this->getHitpoints() <= 0)
 			std::cout << "\nClapTrap " << this->getName() << " should be dead.";
 	std::cout << "\033[0m" << std::endl;
 	}	
@@ -142,11 +147,18 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 
-	if (!this->isDead()) { 
+	if (!this->isDead() && this->getEnergyPoints() >= 10) { 
 		std::cout << "\033[1;36m";
 		std::cout << "ClapTrap " << this->getName() << " is healed ";
 		std::cout << amount << " points.";
 		std::cout << "\033[0m" << std::endl;
 		this->setHealedPoints(amount);
+		this->setEnergyPoints(10);
 	}
+	else if (this->getEnergyPoints() < 10) {
+		std::cout << "\033[1;36m";
+		std::cout << "ClapTrap " << this->getName() << " doesn´t have enough energy.";
+		std::cout << "\033[0m" << std::endl;
+	}
+
 }
