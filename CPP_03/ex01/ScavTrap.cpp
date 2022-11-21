@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:42:24 by potero            #+#    #+#             */
-/*   Updated: 2022/11/20 19:00:16 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/21 11:58:16 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,27 @@ ScavTrap::~ScavTrap(void) {
 	std::cout << "\033[0m" << std::endl;
 	return;
 }
+
+ScavTrap::ScavTrap(ScavTrap& cpy) {
+
+	std::cout << "ScavTrap copy constructor called." << std::endl;
+	*this = cpy;
+	return;
+}
+
+ScavTrap&	ScavTrap::operator=(ScavTrap& rhs){
+
+	std::cout << "ScavTrap assignation operator called." << std::endl;
+
+	if (this != &rhs) {
+		this->_name = rhs.getName();
+		this->_hitpoints = getHitpoints();
+		this->_energy_points = getEnergyPoints();
+		this->_attack_damage = getAttackDamage();
+	}
+	return (*this);
+}
+
 
 void	ScavTrap::guardGate() {
 

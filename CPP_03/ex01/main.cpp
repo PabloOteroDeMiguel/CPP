@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/21 11:48:24 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/21 12:05:25 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,12 @@ int	main(void) {
 //	ScavTrap Martes(Miercoles);
 //	Martes.guardGate();
 	Miercoles.guardGate();
+//	Lunes.guardGate(); //Doesn´t compile because function is on the child.
 	Jueves.attack("Miercoles");
 	Miercoles.takeDamage(20);
+	Miercoles.beRepaired(10);
+	std::cout << Miercoles.getName() << " has " << Miercoles.getEnergyPoints(); 
+	std::cout << " energy points." << std::endl;
+
 //	Martes(Miercoles);
 }
