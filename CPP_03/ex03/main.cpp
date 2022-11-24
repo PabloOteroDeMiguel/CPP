@@ -6,16 +6,17 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/21 17:27:35 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/24 12:49:37 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void) {
-
+/*
 	ClapTrap Viernes("Viernes");
 	ClapTrap Lunes("Lunes");
 
@@ -47,4 +48,9 @@ int	main(void) {
 
 	FragTrap Martes("Martes");
 	Martes.highFivesGuys();
+	*/
+	DiamondTrap Domingo("Domingo");
+	Domingo.highFivesGuys();
+	Domingo.guardGate();
+	Domingo.whoAmI();
 }
