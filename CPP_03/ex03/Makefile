@@ -6,7 +6,7 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 10:37:46 by potero-d          #+#    #+#              #
-#    Updated: 2022/11/23 12:20:30 by potero           ###   ########.fr        #
+#    Updated: 2022/11/24 12:55:11 by potero           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ NAME = a.out
 
 CC = clang++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic 
 %.o:%.cpp
 		$(CC) $(CFLAGS) -c  $< -o $(<:.cpp=.o) 
 RM = rm -f
