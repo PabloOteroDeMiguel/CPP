@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:38 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 12:34:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:37:50 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal(void) {
 
 Animal::~Animal(void) {
 
-	std::cout << "Animal destroyed (no real animal sufferd)." << std::endl;
+	std::cout << "Animal destroyed (No real animal sufferd)." << std::endl;
 	return;
 }
 
@@ -39,13 +39,7 @@ Animal	Animal::operator=(Animal& rhs){
 	return (*this);
 }
 
-std::string	Animal::getType() {
+const std::string	Animal::getType() const {
 
 	return(this->_type);
 }
-
-/*
-std::string	const Animal::getType() {
-
-	return(this->_type);
-}*/

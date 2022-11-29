@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:44:01 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 12:34:47 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:40:56 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ class Animal {
 		Animal(void);
 		~Animal(void);
 		Animal(Animal& cpy);
-		Animal		operator=(Animal& rhs);
-		std::string	getType();
-		//std::string	const getType();
+		Animal				operator=(Animal& rhs);
+		const std::string	getType() const;
 
 	protected:
 
