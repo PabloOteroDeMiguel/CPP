@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:42:24 by potero            #+#    #+#             */
-/*   Updated: 2022/11/21 15:34:55 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 09:53:09 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,18 @@ ScavTrap&	ScavTrap::operator=(ScavTrap& rhs) {
 	}
 	return (*this);
 }
+
+void 	ScavTrap::attack(std::string const & target) {
+
+	if (!this->isDead()) { 
+		std::cout << "\033[1;35m";
+		std::cout << "ScavTrap " << this->getName() << " attack ";
+		std::cout << target << ", with a clean move, causing ";
+		std::cout <<  this->getAttackDamage() <<  " points of damage!";
+		std::cout << "\033[0m" << std::endl;
+	}
+}
+
 
 
 void	ScavTrap::guardGate() {

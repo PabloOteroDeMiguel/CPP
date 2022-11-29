@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 12:21:04 by potero            #+#    #+#             */
-/*   Updated: 2022/11/24 12:44:53 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 10:59:24 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		DiamondTrap(DiamondTrap& cpy);
 
 		std::string	getNameD();
+		using		ScavTrap::attack;
 		void		whoAmI();
 
 	private:

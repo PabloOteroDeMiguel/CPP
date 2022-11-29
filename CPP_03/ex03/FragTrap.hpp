@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:45:42 by potero            #+#    #+#             */
-/*   Updated: 2022/11/23 13:03:44 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 10:57:54 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class FragTrap : virtual public ClapTrap {
 		FragTrap(FragTrap& cpy);
 		
 		void highFivesGuys(void);
+		void 	attack(std::string const & target);
+
 };
 
 #endif

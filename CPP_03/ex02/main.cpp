@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/21 17:27:35 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 10:23:11 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(void) {
 
 	Viernes.attack("Lunes");
 	Lunes.takeDamage(10);
+	/*
 	std::cout << "Lunes try attack:" << std::endl;
 	Lunes.attack("Viernes");
 	std::cout << "Lunes try take damage:" << std::endl;
@@ -32,13 +33,10 @@ int	main(void) {
 	Viernes.beRepaired(10);
 	std::cout << Viernes.getName() << " has " << Viernes.getEnergyPoints(); 
 	std::cout << " energy points." << std::endl;
-
+	*/
 	ScavTrap Miercoles("Miercoles");
 	ScavTrap Jueves("Jueves");
-//	ScavTrap Martes(Miercoles);
-//	Martes.guardGate();
 	Miercoles.guardGate();
-//	Lunes.guardGate(); //Doesn´t compile because function is on the child.
 	Jueves.attack("Miercoles");
 	Miercoles.takeDamage(20);
 	Miercoles.beRepaired(10);
@@ -46,5 +44,7 @@ int	main(void) {
 	std::cout << " energy points." << std::endl;
 
 	FragTrap Martes("Martes");
+	Martes.attack("Miercoles");
+	Miercoles.takeDamage(30);
 	Martes.highFivesGuys();
 }

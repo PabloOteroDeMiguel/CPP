@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:45:18 by potero            #+#    #+#             */
-/*   Updated: 2022/11/21 17:31:37 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 10:17:12 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,17 @@ FragTrap&	FragTrap::operator=(FragTrap& rhs) {
 		this->_attack_damage = getAttackDamage();
 	}
 	return (*this);
+}
+
+void 	FragTrap::attack(std::string const & target) {
+
+	if (!this->isDead()) { 
+		std::cout << "\033[1;34m";
+		std::cout << "FragTrap " << this->getName() << " attack ";
+		std::cout << target << ", with a normal move, causing ";
+		std::cout <<  this->getAttackDamage() <<  " points of damage!";
+		std::cout << "\033[0m" << std::endl;
+	}
 }
 
 void FragTrap::highFivesGuys(void) {

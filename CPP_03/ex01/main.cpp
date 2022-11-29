@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:13:47 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/21 12:05:25 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 09:52:56 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void) {
 
 	Viernes.attack("Lunes");
 	Lunes.takeDamage(10);
+	/*
 	std::cout << "Lunes try attack:" << std::endl;
 	Lunes.attack("Viernes");
 	std::cout << "Lunes try take damage:" << std::endl;
@@ -31,11 +32,9 @@ int	main(void) {
 	Viernes.beRepaired(10);
 	std::cout << Viernes.getName() << " has " << Viernes.getEnergyPoints(); 
 	std::cout << " energy points." << std::endl;
-
+	*/
 	ScavTrap Miercoles("Miercoles");
 	ScavTrap Jueves("Jueves");
-//	ScavTrap Martes(Miercoles);
-//	Martes.guardGate();
 	Miercoles.guardGate();
 //	Lunes.guardGate(); //Doesn´t compile because function is on the child.
 	Jueves.attack("Miercoles");
@@ -44,5 +43,4 @@ int	main(void) {
 	std::cout << Miercoles.getName() << " has " << Miercoles.getEnergyPoints(); 
 	std::cout << " energy points." << std::endl;
 
-//	Martes(Miercoles);
 }
