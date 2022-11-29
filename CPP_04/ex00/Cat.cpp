@@ -6,11 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 16:54:32 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 18:39:38 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "Cat.hpp"
 
 Cat::Cat(void) : Animal() {
 
@@ -30,10 +30,15 @@ Cat::Cat(Cat& cpy) {
 	return;
 }
 
-Cat::cat	operator=(Cat& rhs) {
+Cat	Cat::operator=(Cat& rhs) {
 
 	if (this != &rhs) {
 		this->_type = rhs.getType();
 	}
 	return (*this);
+}
+
+void	Cat::makeSound() const {
+
+	std::cout << "Meeeeeeeow" << std::endl;
 }

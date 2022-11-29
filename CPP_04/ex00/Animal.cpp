@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:38 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 16:37:50 by potero           ###   ########.fr       */
+/*   Updated: 2022/11/29 18:16:04 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ Animal	Animal::operator=(Animal& rhs){
 const std::string	Animal::getType() const {
 
 	return(this->_type);
+}
+
+void	Animal::makeSound() const {
+
+	std::cout << "...sound of silence..." << std::endl;
 }
