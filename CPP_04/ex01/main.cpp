@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 10:17:11 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/01 12:06:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(void) {
 	delete meta;
 	delete i;
 	delete j;
-
+/*
 	std::cout  << "--------------------------------------" << std::endl;
 	const WrongAnimal*	wrongMeta = new WrongAnimal();
 	std::cout << "WrongAnimal type: " << wrongMeta->getType() << std::endl;
@@ -58,6 +58,6 @@ int	main(void) {
 
 	delete wrongMeta;
 	delete wrongCat;
-
+*/
 }
 

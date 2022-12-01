@@ -3,3 +3,7 @@
 
 https://en.cppreference.com
 https://cplusplus.com
+
+
+Deep copy
+https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/
