@@ -6,11 +6,11 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 10:37:46 by potero-d          #+#    #+#              #
-#    Updated: 2022/11/29 11:47:26 by potero-d         ###   ########.fr        #
+#    Updated: 2022/12/01 10:15:53 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp 
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

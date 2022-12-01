@@ -6,13 +6,15 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 19:00:23 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/01 10:17:11 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 void	leaks(void) {
 	system("leaks a.out");
@@ -43,5 +45,19 @@ int	main(void) {
 	delete meta;
 	delete i;
 	delete j;
+
+	std::cout  << "--------------------------------------" << std::endl;
+	const WrongAnimal*	wrongMeta = new WrongAnimal();
+	std::cout << "WrongAnimal type: " << wrongMeta->getType() << std::endl;
+
+	const WrongAnimal*	wrongCat = new WrongCat();
+	std::cout << wrongCat->getType() << " " << std::endl;
+	
+	std::cout << "wrongCat says: ";
+	wrongCat->makeSound(); //will output the cat sound!
+
+	delete wrongMeta;
+	delete wrongCat;
+
 }
 
