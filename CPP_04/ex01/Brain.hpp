@@ -6,12 +6,15 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:05:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 12:12:11 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/01 17:52:33 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
+
+#include<iostream>
+#include<ostream>
 
 class Brain {
 
@@ -20,10 +23,15 @@ class Brain {
 		Brain(void);
 		~Brain(void);
 		Brain(Brain& cpy);
-		Brain			operator=(Brain& rhs);
+		Brain	operator=(Brain& rhs);
 
+		std::string	getIdea(int i);
+		void		setIdea(std::string idea, int i);
+		void		thoughts(void);
+		
 	private:
-		std::string ideas[100]:
+
+		std::string _ideas[100];
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:48 by potero-d          #+#    #+#             */
-/*   Updated: 2022/11/29 18:45:43 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/01 17:51:33 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : virtual public Animal {
 
@@ -24,6 +25,11 @@ class Cat : virtual public Animal {
 		Cat(Cat& cpy);
 		Cat			operator=(Cat& rhs);
 		void		makeSound() const;
+		Brain*	getBrain();
+
+	private:
+		
+		Brain	*brain;
 
 };
 
