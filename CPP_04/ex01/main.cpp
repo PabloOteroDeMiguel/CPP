@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 12:06:39 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/01 21:11:29 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,13 @@ int	main(void) {
 	
 	std::cout << "meta says: ";
 	meta->makeSound();
+
+	//std::cout << "Meta thoughts: " << std::endl;
+	//meta->thoughts();  //NO compile because not all animals have brain.
+	//std::cout << "Cat thoughts: " << std::endl;
+	//i->getBrain()->thoughts();
+	//std::cout << "Dog thoughts: " << std::endl;
+	//j->thoughts();
 
 	delete meta;
 	delete i;

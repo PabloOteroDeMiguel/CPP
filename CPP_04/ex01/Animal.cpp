@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:38 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 09:15:40 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/01 21:08:16 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,12 @@ void	Animal::makeSound() const {
 
 	std::cout << "...sound of silence..." << std::endl;
 }
+/*
+const Brain*	Animal::getBrain() const {
+
+	if (this->brain) {
+		return(this->brain);
+	}
+	return (0);
+}
+*/

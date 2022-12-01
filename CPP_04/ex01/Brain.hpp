@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:05:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 17:52:33 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/01 20:57:41 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Brain {
 
 		std::string	getIdea(int i);
 		void		setIdea(std::string idea, int i);
-		void		thoughts(void);
+		void		thoughts(void) const;
 		
 	private:
 

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:05:26 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 17:54:53 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/01 20:57:49 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Brain::Brain(void) {
 
+	std::cout << "Brain called" << std::endl;
 	this->_ideas[0] = "First was nothing...";
 	return;
 }
@@ -56,14 +57,14 @@ std::string	Brain::getIdea(int i) {
 	return (this->_ideas[i]);
 }
 
-void	Brain::thoughts(void) {
+void	Brain::thoughts(void) const {
 
 	int i;
 
 	i = 0;
 	while (i < 100) {
 
-		if (this->_ideas[i] != '\0') {
+		if (this->_ideas[i].size() != 0) {
 			std::cout << "Idea " << i << ": " << this->_ideas[i] << std::endl;
 		}
 		i++;
