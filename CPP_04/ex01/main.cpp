@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 16:53:44 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 17:03:32 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(void) {
 	delete i;
 	delete j;
 
-	std::cout << "----------------------------------------" << std::endl;
+	std::cout << "------------------CAT---------------------" << std::endl;
 
 	Cat	*luke = new Cat;
 	Cat	*leia = new Cat;
@@ -72,7 +72,31 @@ int	main(void) {
 	delete luke;
 	delete leia;
 	
-	std::cout << "----------------------------------------" << std::endl;
+	std::cout << "------------------DOG---------------------" << std::endl;
+	
+	Dog	*otto = new Dog;
+	Dog	*tamal = new Dog;
+	
+	std::cout << "Otto thoughts: " << std::endl;
+	otto->getBrain()->thoughts();
+	std::cout << "Tamal thoughts: " << std::endl;
+	tamal->getBrain()->thoughts();
+	std::cout << "Set an idea" << std::endl;
+	otto->getBrain()->setIdea("It's that some Ham", 10);
+	*tamal = *otto;
+	std::cout << "Otto thoughts: " << std::endl;
+	otto->getBrain()->thoughts();
+	std::cout << "Tamal thoughts: " << std::endl;
+	tamal->getBrain()->thoughts();
+	std::cout << "Set a New idea" << std::endl;
+	otto->getBrain()->setIdea("Let's have a Ham Sandwich!", 10);
+	std::cout << "Otto thoughts: " << std::endl;
+	otto->getBrain()->thoughts();
+	std::cout << "Tamal thoughts: " << std::endl;
+	tamal->getBrain()->thoughts();
+
+	delete otto;
+	delete tamal;
 
 /*
 	std::cout  << "--------------------------------------" << std::endl;
@@ -89,4 +113,3 @@ int	main(void) {
 	delete wrongCat;
 */
 }
-

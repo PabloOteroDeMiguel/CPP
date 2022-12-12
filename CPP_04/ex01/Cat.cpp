@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 16:53:32 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 16:57:27 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Cat&	Cat::operator=(Cat& rhs) {
 	if (this != &rhs) {
 		this->_type = rhs.getType();
 		delete this->brain;
-		this->brain = new Brain(*rhs.getBrain()); //This it's equal to lines 42 43
+		this->brain = new Brain(*rhs.getBrain()); //This it's equal to lines 42 43y
 		//this->brain = new Brain();
 		//*this->brain = *rhs.getBrain();
 	}
