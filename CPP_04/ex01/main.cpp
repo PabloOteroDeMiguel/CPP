@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 13:35:21 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 16:53:44 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(void) {
 	leia->getBrain()->thoughts();
 	std::cout << "Set an idea" << std::endl;
 	luke->getBrain()->setIdea("It's that some Turkey", 10);
-	leia = luke;
+	*leia = *luke;
 	std::cout << "Luke thoughts: " << std::endl;
 	luke->getBrain()->thoughts();
 	std::cout << "Leia thoughts: " << std::endl;
@@ -68,7 +68,12 @@ int	main(void) {
 	luke->getBrain()->thoughts();
 	std::cout << "Leia thoughts: " << std::endl;
 	leia->getBrain()->thoughts();
+
+	delete luke;
+	delete leia;
 	
+	std::cout << "----------------------------------------" << std::endl;
+
 /*
 	std::cout  << "--------------------------------------" << std::endl;
 	const WrongAnimal*	wrongMeta = new WrongAnimal();

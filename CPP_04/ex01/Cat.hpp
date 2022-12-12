@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:48 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 13:29:11 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 16:44:51 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat : virtual public Animal {
 		Cat(void);
 		~Cat(void);
 		Cat(Cat& cpy);
-		Cat			operator=(Cat& rhs);
+		Cat&		operator=(Cat& rhs);
 		void		makeSound() const;
 		Brain*	getBrain();
 

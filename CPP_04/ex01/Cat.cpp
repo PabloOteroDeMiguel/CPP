@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 13:46:28 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 16:53:32 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ Cat::Cat(Cat& cpy) {
 	return;
 }
 
-Cat	Cat::operator=(Cat& rhs) {
+Cat&	Cat::operator=(Cat& rhs) {
 
+	std::cout << "Cat '=' called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs.getType();
-		this->brain = new Brain();
-		this->brain = rhs.getBrain();
+		delete this->brain;
+		this->brain = new Brain(*rhs.getBrain()); //This it's equal to lines 42 43
+		//this->brain = new Brain();
+		//*this->brain = *rhs.getBrain();
 	}
 	return (*this);
 }
