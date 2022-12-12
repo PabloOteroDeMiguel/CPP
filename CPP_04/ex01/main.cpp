@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 21:11:29 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:35:21 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,33 @@ int	main(void) {
 	std::cout << "meta says: ";
 	meta->makeSound();
 
-	//std::cout << "Meta thoughts: " << std::endl;
-	//meta->thoughts();  //NO compile because not all animals have brain.
-	//std::cout << "Cat thoughts: " << std::endl;
-	//i->getBrain()->thoughts();
-	//std::cout << "Dog thoughts: " << std::endl;
-	//j->thoughts();
-
 	delete meta;
 	delete i;
 	delete j;
+
+	std::cout << "----------------------------------------" << std::endl;
+
+	Cat	*luke = new Cat;
+	Cat	*leia = new Cat;
+	
+	std::cout << "Luke thoughts: " << std::endl;
+	luke->getBrain()->thoughts();
+	std::cout << "Leia thoughts: " << std::endl;
+	leia->getBrain()->thoughts();
+	std::cout << "Set an idea" << std::endl;
+	luke->getBrain()->setIdea("It's that some Turkey", 10);
+	leia = luke;
+	std::cout << "Luke thoughts: " << std::endl;
+	luke->getBrain()->thoughts();
+	std::cout << "Leia thoughts: " << std::endl;
+	leia->getBrain()->thoughts();
+	std::cout << "Set a New idea" << std::endl;
+	luke->getBrain()->setIdea("Let's have a Turkey Sandwich!", 10);
+	std::cout << "Luke thoughts: " << std::endl;
+	luke->getBrain()->thoughts();
+	std::cout << "Leia thoughts: " << std::endl;
+	leia->getBrain()->thoughts();
+	
 /*
 	std::cout  << "--------------------------------------" << std::endl;
 	const WrongAnimal*	wrongMeta = new WrongAnimal();

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:46 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 21:10:50 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:46:28 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ Cat::Cat(void) : Animal() {
 
 Cat::~Cat(void) {
 
-	std::cout << "Cat destroyed (No real animal sufferd)." << std::endl;
 	delete this->brain;
+	std::cout << "Cat destroyed (No real animal sufferd)." << std::endl;
 	return;
 }
 
@@ -51,4 +51,3 @@ Brain*	Cat::getBrain() {
 
 	return(this->brain);
 }
-
