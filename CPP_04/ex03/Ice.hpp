@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:26:01 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 12:50:48 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/14 15:00:57 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class Ice : virtual public AMateria {
 
 	public:
+
 		Ice();
 		~Ice();
 		Ice(Ice& cpy);
@@ -26,4 +27,4 @@ class Ice : virtual public AMateria {
 	//	virtual void use(ICharacter& target);
 };
 
-#endif;
+#endif

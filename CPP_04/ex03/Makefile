@@ -6,11 +6,11 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 10:37:46 by potero-d          #+#    #+#              #
-#    Updated: 2022/12/14 12:12:26 by potero-d         ###   ########.fr        #
+#    Updated: 2022/12/14 15:17:37 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp AMateria.cpp 
+SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

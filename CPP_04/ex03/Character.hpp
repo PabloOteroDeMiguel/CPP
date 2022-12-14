@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 12:26:55 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 14:25:32 by potero-d         ###   ########.fr       */
+/*   Created: 2022/12/14 15:18:10 by potero-d          #+#    #+#             */
+/*   Updated: 2022/12/14 15:27:10 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 #include "AMateria.hpp"
 
-class Cure : virtual public AMateria {
+class Character : ICharacter() {
 
 	public:
 
-		Cure();
-		~Cure();
-		Cure(Cure& cpy);
-		Cure&	operator=(Cure& rhs);
-		virtual AMateria*	clone() const;
-	//	virtual void use(ICharacter& target);
+		Character(std::string const& name);
+		~Character(void);
+		Character(Character& cpy);
+		Character&	operator=(Character& rhs);
+
+		std::string const & getName() const;
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
+	
+	private:
+
+		std::string	_name;
+		AMateria*	materia[4];
 };
 
 #endif

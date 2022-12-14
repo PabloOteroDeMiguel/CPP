@@ -6,10 +6,14 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 11:46:08 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/14 14:36:23 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 
 void	leaks(void) {
@@ -17,6 +21,22 @@ void	leaks(void) {
 }
 
 int	main(void) {
+
+	//atexit(leaks);
+	//AMateria*	m = new AMateria()			//Abstract class.;
+	//std::cout << m->getType() << std::endl;
+	AMateria*	c = new Cure();
+	AMateria*	i = new Ice();
+
+	AMateria*	cclone;
+	AMateria*	iclone;
+   	cclone = c->clone();
+	iclone = i->clone();
+	
+	delete cclone;
+	delete iclone;
+	delete c;
+	delete i;
 
 	/*
 	IMateriaSource* src = new MateriaSource();
