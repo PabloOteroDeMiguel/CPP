@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:44:01 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/01 21:09:49 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/14 10:48:11 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Animal {
 		Animal				operator=(Animal& rhs);
 		const std::string	getType() const;
 		virtual	void		makeSound() const;
-	//	const Brain*		getBrain() const;
 
 	protected:
 
