@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:47:50 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 17:03:32 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/14 09:40:33 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int	main(void) {
 
 	std::cout << "------------------CAT---------------------" << std::endl;
 
-	Cat	*luke = new Cat;
-	Cat	*leia = new Cat;
+	Cat	*luke = new Cat();
+	Cat	*leia = new Cat();
 	
 	std::cout << "Luke thoughts: " << std::endl;
 	luke->getBrain()->thoughts();
@@ -74,8 +74,8 @@ int	main(void) {
 	
 	std::cout << "------------------DOG---------------------" << std::endl;
 	
-	Dog	*otto = new Dog;
-	Dog	*tamal = new Dog;
+	Dog	*otto = new Dog();
+	Dog	*tamal = new Dog();
 	
 	std::cout << "Otto thoughts: " << std::endl;
 	otto->getBrain()->thoughts();
@@ -98,18 +98,25 @@ int	main(void) {
 	delete otto;
 	delete tamal;
 
-/*
-	std::cout  << "--------------------------------------" << std::endl;
-	const WrongAnimal*	wrongMeta = new WrongAnimal();
-	std::cout << "WrongAnimal type: " << wrongMeta->getType() << std::endl;
+	std::cout << "----------------ARRAY---------------------" << std::endl;
 
-	const WrongAnimal*	wrongCat = new WrongCat();
-	std::cout << wrongCat->getType() << " " << std::endl;
-	
-	std::cout << "wrongCat says: ";
-	wrongCat->makeSound(); //will output the cat sound!
+	const Animal*	litter[20];
+	int		n;
 
-	delete wrongMeta;
-	delete wrongCat;
-*/
+	n = 0;
+
+	while (n < 20) {
+		
+		if (n % 2 == 0)
+			litter[n] = new Dog();
+		else
+			litter[n] = new Cat();
+		n++;
+	}
+	n = 0;
+	while (n < 20) {
+
+		delete litter[n];
+		n++;
+	}
 }

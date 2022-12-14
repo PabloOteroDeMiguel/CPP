@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:05:26 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/12 16:35:10 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/14 09:21:49 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 Brain::Brain(void) {
 
-	std::cout << "Brain called" << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << "Brain called";
 	this->_ideas[0] = "First was nothing...";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
 Brain::~Brain(void) {
 
-	std::cout << "Brain destroyed, who needs one." << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << "Brain destroyed, who needs one.";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
