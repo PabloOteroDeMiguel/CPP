@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 14:36:23 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/14 16:44:27 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(void) {
 	//atexit(leaks);
 	//AMateria*	m = new AMateria()			//Abstract class.;
 	//std::cout << m->getType() << std::endl;
+	std::cout << ">-----     MATERIA     -----<" << std::endl;
+
 	AMateria*	c = new Cure();
 	AMateria*	i = new Ice();
 
@@ -37,6 +39,8 @@ int	main(void) {
 	delete iclone;
 	delete c;
 	delete i;
+
+	std::cout << ">-----     CHARACTER     -----<" << std::endl;
 
 	/*
 	IMateriaSource* src = new MateriaSource();
