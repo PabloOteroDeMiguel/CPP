@@ -1,55 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 11:47:38 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 11:18:51 by potero-d         ###   ########.fr       */
+/*   Created: 2022/11/29 11:47:44 by potero-d          #+#    #+#             */
+/*   Updated: 2022/12/14 09:27:15 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
-Animal::Animal(void) {
+Dog::Dog(void) : Animal() {
 
-	std::cout << "\033[1;32m";
-	std::cout << "Animal it´s called!"  ;
+	std::cout << "\033[1;34m";
+	std::cout << "Dog it´s called!";
 	std::cout << "\033[0m" << std::endl;
-	this->_type = "Default";
+	this->_type = "Dog";
+	this->brain = new Brain();
+}
+
+Dog::~Dog(void) {
+
+	delete this->brain;
+	std::cout << "\033[1;34m";
+	std::cout << "Dog destroyed (No real animal sufferd).";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
-Animal::~Animal(void) {
-
-	std::cout << "\033[1;32m";
-	std::cout << "Animal " << this->getType();
-	std::cout << " destroyed (No real animal sufferd).";
-	std::cout << "\033[0m" << std::endl;
-	return;
-}
-
-Animal::Animal(Animal& cpy) {
+Dog::Dog(Dog& cpy) {
 
 	*this = cpy;
 	return;
 }
 
-Animal&	Animal::operator=(Animal& rhs){
+Dog&	Dog::operator=(Dog& rhs) {
 
+	std::cout << "Dog '=' called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs.getType();
+		delete this->brain;
+		this->brain = new Brain(*rhs.getBrain());
 	}
 	return (*this);
 }
 
-const std::string	Animal::getType() const {
+void	Dog::makeSound() const {
 
-	return(this->_type);
+	std::cout << "Woof Woof" << std::endl;
 }
 
-void	Animal::makeSound() const {
+Brain*	Dog::getBrain() {
 
-	std::cout << "...sound of silence..." << std::endl;
+	return(this->brain);
 }

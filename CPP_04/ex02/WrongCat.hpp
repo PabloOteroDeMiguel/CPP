@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 11:44:01 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 11:18:38 by potero-d         ###   ########.fr       */
+/*   Created: 2022/12/01 09:26:35 by potero-d          #+#    #+#             */
+/*   Updated: 2022/12/01 09:32:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-#include<iostream>
-#include<ostream>
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Animal {
+class WrongCat : public WrongAnimal {
 
 	public:
 
-		Animal(void);
-		virtual ~Animal(void);
-		Animal(Animal& cpy);
-		Animal&				operator=(Animal& rhs);
-		const std::string	getType() const;
-		virtual	void		makeSound() const;
-
-	protected:
-
-		std::string	_type;
+		WrongCat(void);
+		~WrongCat(void);
+		WrongCat(WrongCat& cpy);
+		WrongCat			operator=(WrongCat& rhs);
+		void		makeSound() const;
 
 };
 
