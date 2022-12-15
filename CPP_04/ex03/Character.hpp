@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:10 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:48:57 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 13:06:23 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Character : public ICharacter {
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
 	
-	//	void printMateria();
+		void printMateria();
 
 	private:
 

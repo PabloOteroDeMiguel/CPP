@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:03:11 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:52:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 12:51:18 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
@@ -24,7 +26,7 @@ class ICharacter
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
 
-//		virtual void printMateria() = 0;
+		virtual void printMateria() = 0;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:49:47 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 13:07:42 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,27 @@ int	main(void) {
 	yo->equip(ice);
 	yo->equip(ice);
 	yo->equip(cure);
-	yo->use(1, *tu);
 //	yo->printMateria();
 
+	yo->use(1, *tu);
+	yo->use(3, *tu);
+	tu->use(1, *yo);
+
+	ICharacter* el = new Character("Copy");
+	yo->printMateria();
+//	el->printMateria();
+	*el = *yo;
+	el->printMateria();
+	el->use(1, *tu);
+	yo->use(1, *tu);
+	yo->unequip(1);
+	yo->printMateria();
+	el->printMateria();
+	yo->equip(ice);
+	yo->use(1, *tu);
+	el->use(1, *tu);
 	delete yo;
+	delete tu;
 	delete cure;
 	delete ice;
 

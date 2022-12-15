@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:26:34 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:46:26 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 13:05:32 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 Ice::Ice(void) : AMateria() {
 
-	std::cout << "\033[1;36m";
-	std::cout << "Ice";
-	std::cout << "\033[0m" << std::endl;
+//	std::cout << "\033[1;36m";
+//	std::cout << "Ice";
+//	std::cout << "\033[0m" << std::endl;
 	this->_type = "ice";
 	return;
 }
 
 Ice::~Ice(void) {
 
-	std::cout << "\033[1;36m";
-	std::cout << "Ice destroyed";
-	std::cout << "\033[0m" << std::endl;
+//	std::cout << "\033[1;36m";
+//	std::cout << "Ice destroyed";
+//	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
@@ -53,9 +53,9 @@ AMateria*	Ice::clone() const {
 	return(cln);
 }
 
-virtual void Cure::use(ICharacter& target) {
+void Ice::use(ICharacter& target) {
 
 	std::cout << "\033[1;36m";
-	std::cout << "* heals " << target.getName << "’s wounds *";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *";
 	std::cout << "\033[0m" << std::endl;
 }

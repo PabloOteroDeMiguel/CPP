@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:47:07 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:43:08 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 12:35:11 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 AMateria::AMateria(void) {
 
-	std::cout << "Materia" << std::endl;
+//	std::cout << "Materia" << std::endl;
 	this->_type = "default";
 	return;
 }
 
 AMateria::AMateria(std::string const & type) {
 
-	std::cout << "Materia" << std::endl;
+//	std::cout << "Materia" << std::endl;
 	this->_type = type;
 	return;
 }
 
 AMateria::~AMateria(void) {
 
-	std::cout << "Materia destroyed" << std::endl;
+//	std::cout << "Materia destroyed" << std::endl;
 	return;
 }
 
@@ -53,5 +53,6 @@ std::string const & AMateria::getType() const {
 
 void AMateria::use(ICharacter& target) {
 
-	std::cout << "...Materia does what materia does..." << std::endl;
+	target.getName();
+	std::cout << "...Materia does what materia does...";
 }
