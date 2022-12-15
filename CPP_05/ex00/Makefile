@@ -6,11 +6,11 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2022/12/15 17:12:21 by potero-d         ###   ########.fr        #
+#    Updated: 2022/12/15 18:06:29 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp 
+SRCS = main.cpp Bureaucrat.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
