@@ -6,12 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:06:42 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 16:18:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:04:25 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MateriaSource.hpp"
-#include "IMateriaSource.hpp"
+#include "header.hpp"
 
 MateriaSource::MateriaSource() {
 
@@ -106,7 +105,7 @@ AMateria*	MateriaSource::createMateria(std::string const & type) {
 				(type == this->knowledgeBook[i]->getType())) {
 
 			std::cout << "\033[1;32m";
-			std::cout << "Materia " << type << " created" << std::endl;
+			std::cout << "Materia " << type << " created";
 			std::cout << "\033[0m" << std::endl;
 			return(this->knowledgeBook[i]);
 		}

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 12:26:55 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 16:50:57 by potero-d         ###   ########.fr       */
+/*   Created: 2022/12/15 16:47:21 by potero-d          #+#    #+#             */
+/*   Updated: 2022/12/15 17:02:55 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef HEADER_H
+# define HEADER_H
 
-#include "header.hpp"
+#include<iostream>
+#include<ostream>
 
-class Cure : virtual public AMateria {
+#include "AMateria.hpp"
 
-	public:
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
-		Cure();
-		~Cure();
-		Cure(Cure& cpy);
-		Cure&	operator=(Cure& rhs);
-		virtual AMateria*	clone() const;
-		virtual void use(ICharacter& target);
-};
+#include "Cure.hpp"
+#include "Ice.hpp"
+
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+//#include "IMateriaSource.hpp"
 
 #endif

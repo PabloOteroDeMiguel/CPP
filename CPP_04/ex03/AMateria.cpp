@@ -6,11 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:47:07 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 15:04:07 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:49:34 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "header.hpp"
 
 AMateria::AMateria(void) {
 

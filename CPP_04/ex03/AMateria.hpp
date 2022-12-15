@@ -6,16 +6,16 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:47:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 10:55:54 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:54:59 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
-#include<iostream>
-#include<ostream>
-#include "ICharacter.hpp"
+#include "header.hpp"
+
+class ICharacter;
 
 class AMateria {
 

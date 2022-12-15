@@ -6,14 +6,14 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:03:57 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 15:29:11 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:51:36 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef IMATERIASOURCE_HPP
 # define IMATERIASOURCE_HPP
 
-#include "AMateria.hpp"
+#include "header.hpp"
 
 class IMateriaSource
 {

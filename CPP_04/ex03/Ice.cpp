@@ -6,12 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:26:34 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 15:55:16 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:51:52 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "AMateria.hpp"
+#include "header.hpp"
 
 Ice::Ice(void) : AMateria() {
 

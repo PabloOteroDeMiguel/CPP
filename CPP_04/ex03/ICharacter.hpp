@@ -6,14 +6,14 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:03:11 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 12:51:18 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:51:15 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include "AMateria.hpp"
+#include "header.hpp"
 
 class AMateria;
 

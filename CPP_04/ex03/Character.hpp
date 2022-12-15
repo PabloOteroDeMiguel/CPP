@@ -6,15 +6,14 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:10 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 13:06:23 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:50:29 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include "AMateria.hpp"
-#include "ICharacter.hpp"
+#include "header.hpp"
 
 class Character : public ICharacter {
 

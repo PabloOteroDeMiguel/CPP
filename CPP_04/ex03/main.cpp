@@ -6,17 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 15:02:46 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:03:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "AMateria.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "ICharacter.hpp"
-#include "Character.hpp"
-
+#include "header.hpp"
 
 void	leaks(void) {
 	system("leaks a.out");
@@ -81,7 +75,8 @@ int	main(void) {
 	delete cure;
 	delete ice;
 
-	/*
+	std::cout << ">-----     MAIN      -----<" << std::endl;
+	
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -102,7 +97,7 @@ int	main(void) {
 	delete bob;
 	delete me;
 	delete src;
-	*/
+
 	return (0);
 
 }

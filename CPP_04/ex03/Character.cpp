@@ -6,13 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 15:17:39 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:49:54 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.hpp"
-#include "AMateria.hpp"
-#include "ICharacter.hpp"
+#include "header.hpp"
 
 Character::Character(void) {
 

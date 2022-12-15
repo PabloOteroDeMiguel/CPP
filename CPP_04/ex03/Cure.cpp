@@ -6,11 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:27:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 12:45:00 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 16:50:46 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cure.hpp"
+#include "header.hpp"
 
 Cure::Cure(void) : AMateria() {
 
