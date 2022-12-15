@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 16:42:55 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:52:49 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ Character::Character(std::string const& name) {
 	}
 	this->_name = name;
 	
-	std::cout << "\033[1;30m";
-	std::cout << this->_name << "ready to play.";
+	std::cout << "\033[1;29m";
+	std::cout << this->_name << " ready to play.";
 	std::cout << "\033[0m" << std::endl;
 }
 
@@ -58,6 +58,9 @@ Character::~Character() {
 			delete this->materia[i];
 		i++;
 	}
+	std::cout << "\033[1;29m";
+	std::cout << this->_name << " left the game.";
+	std::cout << "\033[0m" << std::endl;
 	return;
 }
 
@@ -93,3 +96,55 @@ std::string const & Character::getName() const {
 
 	return (this->_name);
 }
+
+void Character::equip(AMateria* m) {
+
+	int	i;
+
+	i = 0;
+	while (i < 4) {
+
+		if (!this->materia[i])
+			break;
+		i++;
+	}
+	if (i < 4) 
+		materia[i] = m->clone();
+	else {
+
+		std::cout << "\033[1;31m";
+		std::cout << "Full inventory";
+		std::cout << "\033[0m" << std::endl;
+	}
+}
+
+void Character::unequip(int idx) {
+
+	delete this->materia[idx];
+}
+
+virtual void use(int idx, ICharacter& target) {
+
+	this->materia[i]->use(target);
+}
+
+/*
+void Character::printMateria() {
+
+	int	i;
+
+	i = 0;
+	while (i < 4) {
+
+		if (this->materia[i]){
+
+			std::cout << i << ": ";
+			std::cout << this->materia[i]->getType() << std::endl;
+		}
+		else
+			std::cout << i << ": empty" << std::endl;
+		i++;
+	}
+}
+*/
+

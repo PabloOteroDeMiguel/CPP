@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:10 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 16:42:26 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:48:57 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ class Character : public ICharacter {
 		Character&	operator=(Character& rhs);
 
 		std::string const & getName() const;
-	//	void equip(AMateria* m);
-	//	void unequip(int idx);
-	//	void use(int idx, ICharacter& target);
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
 	
+	//	void printMateria();
+
 	private:
 
 		std::string	_name;

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 16:44:27 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:49:47 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "AMateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 
 void	leaks(void) {
@@ -27,20 +29,33 @@ int	main(void) {
 	//std::cout << m->getType() << std::endl;
 	std::cout << ">-----     MATERIA     -----<" << std::endl;
 
-	AMateria*	c = new Cure();
-	AMateria*	i = new Ice();
+	AMateria*	cure = new Cure();
+	AMateria*	ice = new Ice();
 
 	AMateria*	cclone;
 	AMateria*	iclone;
-   	cclone = c->clone();
-	iclone = i->clone();
+   	cclone = cure->clone();
+	iclone = ice->clone();
 	
 	delete cclone;
 	delete iclone;
-	delete c;
-	delete i;
 
 	std::cout << ">-----     CHARACTER     -----<" << std::endl;
+
+	ICharacter* yo = new Character("Robot");
+	ICharacter* tu = new Character("Human");
+
+	yo->equip(cure);
+	yo->equip(cure);
+	yo->equip(ice);
+	yo->equip(ice);
+	yo->equip(cure);
+	yo->use(1, *tu);
+//	yo->printMateria();
+
+	delete yo;
+	delete cure;
+	delete ice;
 
 	/*
 	IMateriaSource* src = new MateriaSource();

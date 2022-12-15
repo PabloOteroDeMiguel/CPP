@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:47:07 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 15:27:20 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:43:08 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ std::string const & AMateria::getType() const {
 
 	return(this->_type);
 }
-/*
+
 void AMateria::use(ICharacter& target) {
 
 	std::cout << "...Materia does what materia does..." << std::endl;
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:26:55 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 14:25:32 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:50:58 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CURE_HPP
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Cure : virtual public AMateria {
 
@@ -24,7 +25,7 @@ class Cure : virtual public AMateria {
 		Cure(Cure& cpy);
 		Cure&	operator=(Cure& rhs);
 		virtual AMateria*	clone() const;
-	//	virtual void use(ICharacter& target);
+		virtual void use(ICharacter& target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:26:34 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/14 15:00:48 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 10:46:26 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,10 @@ AMateria*	Ice::clone() const {
 	AMateria*	cln = new Ice();
 	return(cln);
 }
-/*
-void use(ICharacter& target);*/
+
+virtual void Cure::use(ICharacter& target) {
+
+	std::cout << "\033[1;36m";
+	std::cout << "* heals " << target.getName << "’s wounds *";
+	std::cout << "\033[0m" << std::endl;
+}
