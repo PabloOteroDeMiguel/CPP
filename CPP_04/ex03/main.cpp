@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:43:14 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 14:33:07 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 15:02:46 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int	main(void) {
 	delete pa;
 	delete pe;
 
-	std::cout << ">-----     CHARACTER      -----<" << std::endl;
+	std::cout << ">-----     ICHARACTER      -----<" << std::endl;
 
-	ICharacter* yo = new Character("Robot");
-	ICharacter* tu = new Character("Human");
+	ICharacter* yo = new Character("Yo");
+	ICharacter* tu = new Character("Tu");
 
 	yo->equip(cure);
 	yo->equip(cure);
@@ -73,6 +73,8 @@ int	main(void) {
 	yo->use(1, *tu);
 	yo->use(3, *tu);
 	tu->use(1, *yo);
+	tu->use(8, *yo);
+	yo->unequip(9);
 
 	delete yo;
 	delete tu;

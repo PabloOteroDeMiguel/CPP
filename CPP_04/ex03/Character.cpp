@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 14:30:37 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 15:17:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,13 @@ void Character::equip(AMateria* m) {
 	int	i;
 
 	i = 0;
+
+	if (!m) {
+
+		std::cout << "No materia selected" << std::endl;
+		return;
+	}
+
 	while (i < 4) {
 
 		if (!this->materia[i])
@@ -122,13 +129,21 @@ void Character::equip(AMateria* m) {
 
 void Character::unequip(int idx) {
 
-	delete this->materia[idx];
-	this->materia[idx] = NULL;
-	std::cout << "Empty slot " << idx << std::endl;
+	if (idx < 0 || idx > 3)
+		std::cout << "Wrong number" << std::endl;
+	else {
+		delete this->materia[idx];
+		this->materia[idx] = NULL;
+		std::cout << "Empty slot " << idx << std::endl;
+	}
 }
 
 void Character::use(int idx, ICharacter& target) {
-
+	
+	if (idx < 0 || idx > 3) {
+		std::cout << "Wrong number" << std::endl;
+		return;
+	}
 	if (this->materia[idx])
 		this->materia[idx]->use(target);
 	else {
