@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 15:18:05 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 13:07:45 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/15 14:30:37 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,21 +77,15 @@ Character&	Character::operator=(Character& rhs) {
 
 	i = 0;
 
-	std::cout << "I'm here" << std::endl;
 	if (this != &rhs) {
 
-		std::cout << "I'm here" << std::endl;
 		this->_name = rhs.getName();
 		while (i < 4) {
 
 			if (this->materia[i])
 				delete this->materia[i];
-			if (rhs.materia[i]) {
-
-				std::cout << "I'm here" << std::endl;
+			if (rhs.materia[i])
 				this->materia[i] = rhs.materia[i]->clone();
-				std::cout << &(*this->materia[i]) << std::endl;
-			}
 			else
 				this->materia[i] = NULL;
 			i++;
@@ -128,7 +122,7 @@ void Character::equip(AMateria* m) {
 
 void Character::unequip(int idx) {
 
-	//delete this->materia[idx];
+	delete this->materia[idx];
 	this->materia[idx] = NULL;
 	std::cout << "Empty slot " << idx << std::endl;
 }
@@ -155,12 +149,9 @@ void Character::printMateria() {
 
 			std::cout << i << ": ";
 			std::cout << this->materia[i]->getType() << std::endl;
-			std::cout << &(*this->materia[i]) << std::endl;
 		}
-		else {
+		else
 			std::cout << i << ": empty" << std::endl;
-			std::cout << &(*this->materia[i]) << std::endl;
-		}
 		i++;
 	}
 }
