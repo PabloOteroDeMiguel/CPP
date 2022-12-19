@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:32 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 16:36:03 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:27:55 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,18 @@ class Form {
 		bool		getSigned() const;
 		int			getRequiredSign() const;
 		int			getRequiredExecute() const;
+
+		class GradeTooHighException : virtual public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+
+		};
+		class GradeTooLowException : virtual public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+		};
 
 	private:
 

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:44 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 17:11:04 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:28:33 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,14 @@ Form::Form(std::string name, int requiredSign, int requiredExecute) :
 	_name(name), _requiredSign(requiredSign), _requiredExecute(requiredExecute) {
 
 	this->_signed = false;
-	/*
 	if (requiredSign < 1)
-		throw From::GradeTooHighException();
+		throw Form::GradeTooHighException();
 	else if (requiredSign > 150)
-		throw From::GradeTooLowException();
+		throw Form::GradeTooLowException();
 	if (requiredExecute < 1)
-		throw From::GradeTooHighException();
+		throw Form::GradeTooHighException();
 	else if (requiredExecute > 150)
-		throw From::GradeTooLowException();
-	*/
+		throw Form::GradeTooLowException();
 	std::cout << *this << std::endl;
 	return;
 }
@@ -78,7 +76,15 @@ int	Form::getRequiredExecute() const {
 	return(this->_requiredExecute);
 }
 
+const char* Form::GradeTooHighException::what() const throw() {
 
+	return("Grade too High.");
+}
+
+const char* Form::GradeTooLowException::what() const throw() {
+
+	return ("Grade too Low.");
+}
 
 std::ostream& operator<<(std::ostream& out, const Form& form) {
 
