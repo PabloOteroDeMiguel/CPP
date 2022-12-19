@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:32 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 16:15:26 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 16:36:03 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Form {
 		Form();
 		Form(std::string name, int requiredSign, int requiredExecute);
 		~Form();
-		//Form(Form& cpy);
-		//Form& operator=(Form& rhs);
+		Form(Form& cpy);
+		Form& operator=(Form& rhs);
 
 		std::string	getName() const;
 		bool		getSigned() const;

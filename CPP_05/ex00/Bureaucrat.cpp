@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:36 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 15:40:35 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 16:37:15 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ Bureaucrat&	Bureaucrat::operator=(Bureaucrat& rhs) {
 
 	//this->_name = rhs.getName();	// Because it's const so I use _name(cpy._name) in line 35
 									// How can I copy with =?
-	this->_grade = rhs.getGrade();
+	if (this != &rhs)
+		this->_grade = rhs.getGrade();
 	return(*this);
 }	
 

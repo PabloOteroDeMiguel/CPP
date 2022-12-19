@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:41 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 16:31:46 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 16:47:37 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@ int	main(void) {
 
 	Form	form("Form", 20, 20);
 	Form	empty;
+//	Form	other(form);
+//	Form	last("Last", 10, 10);
 	std::cout << empty << std::endl;
+//	std::cout << other << std::endl;
+//	last = form;
+//	std::cout << last << std::endl;
 /*
 	try
 	{
