@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:39 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/15 18:23:06 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 12:04:45 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,36 @@
 
 #include<iostream>
 #include<ostream>
+#include<exception>
 
 class Bureaucrat {
 
 	public:
 
 		//Bureaucrat();
-		Bureaucrat(std::string const & name, int grade);
+		Bureaucrat(std::string name, int grade);
 		~Bureaucrat();
 		Bureaucrat(Bureaucrat& cpy);
 		Bureaucrat&	operator=(Bureaucrat& rhs);
 
+		std::string	getName(); 
+		int			getGrade();
 
-		void	GradeTooHighException();
-		void	GradeTooLowException(void);
+		class GradeTooHighException : virtual public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+		};
+		class GradeTooLowException : virtual public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+		};
 
 	private:
 
-		const std::string	_name;
+		std::string const	_name;
 		int					_grade;
+};
 
 #endif
