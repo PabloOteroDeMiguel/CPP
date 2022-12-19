@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:39 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 12:36:28 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 15:08:55 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Bureaucrat {
 		Bureaucrat(Bureaucrat& cpy);
 		Bureaucrat&	operator=(Bureaucrat& rhs);
 
-		std::string	getName(); 
-		int			getGrade();
+		std::string	getName() const; 
+		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
 
@@ -48,5 +48,7 @@ class Bureaucrat {
 		std::string const	_name;
 		int					_grade;
 };
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& buro);
 
 #endif
