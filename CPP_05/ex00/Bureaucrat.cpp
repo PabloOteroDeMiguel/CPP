@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:36 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 12:18:55 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/19 12:39:10 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,36 @@ std::string	Bureaucrat::getName() {
 int	Bureaucrat::getGrade() {
 
 	return (this->_grade);
+}
+
+void	Bureaucrat::incrementGrade() {
+
+	int	grade;
+
+	grade = _grade;
+	if (grade-- < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else {
+
+		this->_grade--;
+		std::cout << this->_name << " grade increase to ";
+		std::cout << this->_grade <<"." << std::endl;
+	}
+}
+
+void	Bureaucrat::decrementGrade() {
+
+	int	grade;
+
+	grade = _grade;
+	if (grade++ > 150)
+		throw Bureaucrat::GradeTooLowException();
+	else {
+
+		this->_grade++;
+		std::cout << this->_name << "grade decrease to ";
+		std::cout << this->_grade <<"." << std::endl;
+	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
