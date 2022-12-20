@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:32 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/20 13:11:32 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/20 17:42:25 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Form {
 	public:
 
 		Form();
-		Form(std::string name, int requiredSign, int requiredExecute);
-		~Form();
-		Form(Form& cpy);
-		Form& operator=(Form& rhs);
+		Form(std::string name, int requiredSign, int requiredExecute, std::string target);
+		virtual ~Form();
+		Form(Form const & cpy);
+		Form& operator=(Form const & rhs);
 
 		std::string	getName() const;
 		bool		getSigned() const;
@@ -33,7 +33,9 @@ class Form {
 		int			getRequiredExecute() const;
 		void		beSigned(Bureaucrat const &buro);
 
-		void	execute(Bureaucrat const & executor) const;
+		void			setSigned(bool b);
+		std::string		getTarget() const;
+		void			execute(Bureaucrat const & executor) const;
 		virtual void	action(void) const = 0;
 
 		class GradeTooHighException : virtual public std::exception {

@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:44 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/20 13:11:32 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/20 17:42:47 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ Form::Form(void) :
 	return;
 }
 
-Form::Form(std::string name, int requiredSign, int requiredExecute) :
-	_name(name), _requiredSign(requiredSign), _requiredExecute(requiredExecute) {
+Form::Form(std::string name, int requiredSign, int requiredExecute, std::string target) :
+	_name(name), _requiredSign(requiredSign),
+		_requiredExecute(requiredExecute), _target(target) {
 
 	this->_signed = false;
 	if (requiredSign < 1)
@@ -37,18 +38,18 @@ Form::Form(std::string name, int requiredSign, int requiredExecute) :
 
 Form::~Form(void) {
 
-	std::cout << "Form " << this->_name << " destroyed." << std::endl;
+	std::cout << "Form " << this->getName() << " destroyed." << std::endl;
 }
 
-Form::Form(Form& cpy) :
+Form::Form(Form const & cpy) :
 	_name(cpy._name), _requiredSign(cpy.getRequiredSign()),
-		_requiredExecute(cpy.getRequiredExecute()) {
+		_requiredExecute(cpy.getRequiredExecute()), _target(cpy.getTarget()) {
 
 	*this = cpy;
 	return;
 }
 
-Form& Form::operator=(Form& rhs) {
+Form& Form::operator=(Form const & rhs) {
 
 	if (this != &rhs) {
 		this->_signed = rhs.getSigned();
@@ -76,6 +77,16 @@ int	Form::getRequiredExecute() const {
 	return(this->_requiredExecute);
 }
 
+std::string	Form::getTarget() const {
+
+	return(this->_target);
+}
+
+void	Form::setSigned(bool b) {
+
+	this->_signed = b;
+}
+
 void	Form::beSigned(Bureaucrat const &buro) {
 
 	if (buro.getGrade() > this->_requiredSign)
@@ -91,7 +102,7 @@ void	Form::execute(Bureaucrat const & executor) const {
 	if (this->_signed && executor.getGrade() > this->getRequiredExecute())
 		throw GradeTooLowException();
 	else if (!this->_signed)
-		throw NotSignedException():
+		throw NotSignedException();
 
 	this->action();
 }
