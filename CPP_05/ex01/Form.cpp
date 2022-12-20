@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:44 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 17:28:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/20 09:25:36 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,16 @@ int	Form::getRequiredExecute() const {
 	return(this->_requiredExecute);
 }
 
+void	Form::beSigned(Bureaucrat const &buro) {
+
+	if (buro.getGrade() > this->_requiredSign)
+		throw Form::GradeTooLowException();
+	else if (this->_signed == true)
+		throw Form::AlreadySignedException();
+	else
+		this->_signed = true;
+}
+
 const char* Form::GradeTooHighException::what() const throw() {
 
 	return("Grade too High.");
@@ -83,7 +93,12 @@ const char* Form::GradeTooHighException::what() const throw() {
 
 const char* Form::GradeTooLowException::what() const throw() {
 
-	return ("Grade too Low.");
+	return("Grade too Low.");
+}
+
+const char*	Form::AlreadySignedException::what() const throw() {
+
+	return("Already Signed Form.");
 }
 
 std::ostream& operator<<(std::ostream& out, const Form& form) {

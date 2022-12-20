@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:36 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 16:37:15 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/20 09:56:43 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ Bureaucrat::Bureaucrat(Bureaucrat& cpy) : _name(cpy._name) {
 
 Bureaucrat&	Bureaucrat::operator=(Bureaucrat& rhs) {
 
-	//this->_name = rhs.getName();	// Because it's const so I use _name(cpy._name) in line 35
-									// How can I copy with =?
 	if (this != &rhs)
 		this->_grade = rhs.getGrade();
 	return(*this);
@@ -91,6 +89,30 @@ void	Bureaucrat::decrementGrade() {
 	}
 }
 
+void	Bureaucrat::signForm(Form &form) {
+
+	try
+	{
+		form.beSigned(*this);
+		std::cout << *this << " signs Form: " << form.getName() << std::endl;
+	}
+	catch (Form::GradeTooLowException &e)
+	{
+		std::cout << e.what() << std::endl;
+		std::cout << *this << " cannot sign Form ";
+		std::cout << form.getName() << " because: ";
+		std::cout << '\n' << "Grade required: " << form.getRequiredSign(); 
+		std::cout << "." << std::endl;
+	}
+	catch (Form::AlreadySignedException &e)
+	{	
+		std::cout << e.what() << std::endl;
+		std::cout << *this << " cannot sign Form ";
+		std::cout << form.getName() << " because: ";
+		std::cout << '\n' << "Form already Signed." << std::endl;
+	}
+}
+
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
 
 	return("Grade too High.");
@@ -103,6 +125,6 @@ const char* Bureaucrat::GradeTooLowException::what() const throw() {
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& buro) {
 
-	out << buro.getName() << ", bureaucrat grade " << buro.getGrade() << ".";
+	out << buro.getName() << ", bureaucrat grade " << buro.getGrade();
 	return(out);
 }

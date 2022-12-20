@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:39 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 15:38:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/20 09:52:43 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include<iostream>
 #include<ostream>
 #include<exception>
+#include"Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 
@@ -31,6 +34,7 @@ class Bureaucrat {
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
+		void		signForm(Form &form);
 
 		class GradeTooHighException : virtual public std::exception {
 

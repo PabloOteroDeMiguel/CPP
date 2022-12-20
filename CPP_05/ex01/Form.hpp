@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:32 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/19 17:27:55 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/20 09:52:14 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FORM_HPP
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
 
@@ -29,6 +31,7 @@ class Form {
 		bool		getSigned() const;
 		int			getRequiredSign() const;
 		int			getRequiredExecute() const;
+		void		beSigned(Bureaucrat const &buro);
 
 		class GradeTooHighException : virtual public std::exception {
 
@@ -38,6 +41,11 @@ class Form {
 		};
 		class GradeTooLowException : virtual public std::exception {
 
+			public:
+				virtual const char* what() const throw();
+		};
+		class AlreadySignedException : virtual public std::exception {
+		
 			public:
 				virtual const char* what() const throw();
 		};
