@@ -6,16 +6,18 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:41 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/22 13:45:15 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 14:27:05 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int	main(void) {
 
+	/*
 	try
 	{
 		std::cout << "------------Tree-------------" << std::endl;
@@ -31,6 +33,31 @@ int	main(void) {
 		lowWorker.executeForm(tree);
 		std::cout << worker << " try execute Form: " << tree.getName() << std::endl;
 		worker.executeForm(tree);
+		std::cout << "-----------------------------" << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	*/
+	try
+	{
+		std::cout << "-------------Robot------------" << std::endl;
+		Bureaucrat	robot("Robot", 20);
+		Bureaucrat	lowRobot("Robot", 80);
+		RobotomyRequestForm kitchen("Kitchen");
+		RobotomyRequestForm bathroom("Bathroom");
+
+		std::cout << robot << " try execute Form: " << kitchen.getName() << std::endl;
+		robot.executeForm(kitchen);
+		robot.signForm(kitchen);
+		robot.signForm(bathroom);
+		std::cout << kitchen << std::endl;
+		std::cout << lowRobot << " try execute Form: " << kitchen.getName() << std::endl;
+		lowRobot.executeForm(kitchen);
+		std::cout << robot << " try execute Form: " << kitchen.getName() << std::endl;
+		robot.executeForm(kitchen);
+		robot.executeForm(bathroom);
 		std::cout << "-----------------------------" << std::endl;
 	}
 	catch (std::exception & e)

@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 10:28:13 by potero            #+#    #+#             */
-/*   Updated: 2022/12/20 17:48:17 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 14:02:59 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & cpy) 
 }	
 
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs) {
+
 	if (this != &rhs) {
 		this->setSigned(rhs.getSigned());
 	}

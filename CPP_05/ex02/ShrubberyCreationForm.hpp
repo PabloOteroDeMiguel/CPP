@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 10:28:19 by potero            #+#    #+#             */
-/*   Updated: 2022/12/20 17:08:29 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 13:54:25 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ class ShrubberyCreationForm : public Form {
 		ShrubberyCreationForm(ShrubberyCreationForm const & cpy);
 		ShrubberyCreationForm& operator=(ShrubberyCreationForm const & rhs);
 
-		//virtual void	execute(Bureaucrat const & executor) const;
-		virtual void	action(void) const;
+		void	action(void) const;
 
 
 };
