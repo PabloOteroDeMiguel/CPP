@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:08:44 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/20 17:42:47 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 13:39:52 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Form::Form(std::string name, int requiredSign, int requiredExecute, std::string 
 		throw Form::GradeTooHighException();
 	else if (requiredExecute > 150)
 		throw Form::GradeTooLowException();
-	std::cout << *this << std::endl;
+	//std::cout << *this << std::endl;
 	return;
 }
 

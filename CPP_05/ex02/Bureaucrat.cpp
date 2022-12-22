@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:36 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/20 09:56:43 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 13:43:03 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,30 @@ void	Bureaucrat::signForm(Form &form) {
 	}
 }
 
+void	Bureaucrat::executeForm(Form const & form) {
+
+	try
+	{
+		form.execute(*this);
+		std::cout << *this << " executes Form: " << form.getName() << std::endl;
+	}
+	catch (Form::GradeTooLowException &e)
+	{
+		std::cout << e.what() << std::endl;
+		std::cout << *this << " cannot executes Form ";
+		std::cout << form.getName() << " because: ";
+		std::cout << '\n' << "Grade required: " << form.getRequiredExecute(); 
+		std::cout << "." << std::endl;
+	}
+	catch (Form::NotSignedException &e)
+	{	
+		std::cout << e.what() << std::endl;
+		std::cout << *this << " cannot execute Form ";
+		std::cout << form.getName() << " because: ";
+		std::cout << '\n' << "Form it´s not Signed." << std::endl;
+	}
+
+}
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
 
 	return("Grade too High.");

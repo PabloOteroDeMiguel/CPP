@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:39 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/20 09:52:43 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/22 13:23:33 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Bureaucrat {
 		void		incrementGrade();
 		void		decrementGrade();
 		void		signForm(Form &form);
+		void		executeForm(Form const & form);
 
 		class GradeTooHighException : virtual public std::exception {
 
