@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 10:27:58 by potero            #+#    #+#             */
-/*   Updated: 2022/12/23 10:24:58 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/23 10:58:48 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	RobotomyRequestForm::action(void) const {
 	int	random;
 
 	random = rand() % 10;;
-	std::cout << "Random: " << random << std::endl;
+	//std::cout << "Random: " << random << std::endl;
 	if (random % 2 == 0) {
 		std::cout << "Bruum Bruumm.....BzzzZzzzzzzz....Bzzzz.." << std::endl;
 		std::cout << this->getTarget();
