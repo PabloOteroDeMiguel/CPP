@@ -6,10 +6,11 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:04:41 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/22 14:27:05 by potero           ###   ########.fr       */
+/*   Updated: 2022/12/23 10:28:00 by potero           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -57,6 +58,7 @@ int	main(void) {
 		lowRobot.executeForm(kitchen);
 		std::cout << robot << " try execute Form: " << kitchen.getName() << std::endl;
 		robot.executeForm(kitchen);
+		sleep(1);
 		robot.executeForm(bathroom);
 		std::cout << "-----------------------------" << std::endl;
 	}
