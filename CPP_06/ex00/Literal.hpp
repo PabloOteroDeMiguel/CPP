@@ -1,33 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Literal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 08:54:31 by potero-d          #+#    #+#             */
+/*   Created: 2022/12/26 09:18:35 by potero-d          #+#    #+#             */
 /*   Updated: 2022/12/26 09:52:39 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Literal.hpp"
+#ifndef LITERAL_HPP
+# define LITERAL_HPP
 
-int	main(int argc, char **argv) {
+#include<iostream>
+#include<ostream>
 
-	if (argc != 2) {
+class Literal {
 
-		std::cout << "Error: Wrong number of arguments." << std::endl;
-	}
-	else {
+	public:
 
-		Literal one(argv[1]);
-		one.cast();
-		std::cout << "String: " << one.getString() << std::endl;
-		std::cout << "Int: " << one.getInt() << std::endl;
-		std::cout << "Char: " << one.getChar() << std::endl;
-		std::cout << "Float: " << one.getFloat() << std::endl;
-		std::cout << "Double: " << one.getDouble() << std::endl;
-	}
+		Literal();
+		Literal(std::string argument);
+		~Literal();
+		Literal(Literal& cpy);
+		Literal&	operator=(Literal& rhs);
+		
+		std::string	getString();
+		int			getInt();
+		char		getChar();
+		float		getFloat();
+		double		getDouble();
+		
+		void		cast();
 
-	return(0);
-}
+	private:
+
+		std::string	l_string;
+		int			l_int;
+		char		l_char;
+		float		l_float;
+		double		l_double;
+
+};
+
+#endif

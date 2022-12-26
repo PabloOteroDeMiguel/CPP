@@ -6,15 +6,15 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2022/12/26 08:54:08 by potero-d         ###   ########.fr        #
+#    Updated: 2022/12/26 09:38:35 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp 
+SRCS = main.cpp Literal.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = a.out
+NAME = convert
 
 CC = clang++
 
