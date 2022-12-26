@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 09:18:30 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/26 09:51:09 by potero-d         ###   ########.fr       */
+/*   Updated: 2022/12/26 12:38:12 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,13 @@ double	Literal::getDouble() {
 
 void	Literal::cast() {
 
-	this->l_int = static_cast<int>(this->l_string);
-	this->l_char = static_cast<char>(this->l_string);
-	this->l_float = static_cast<float>(this->l_string);
-	this->l_double = static_cast<double>(this->l_double);
+	int	lit;
+
+	std::string::size_type sz;
+	lit = std::stoi(this->l_string, &sz); 
+	std::cout << "Lit: " << lit << std::endl;
+	this->l_int = static_cast<int>(lit);
+	this->l_char = static_cast<char>(lit);
+	this->l_float = static_cast<float>(lit);
+	this->l_double = static_cast<double>(lit);
 }
