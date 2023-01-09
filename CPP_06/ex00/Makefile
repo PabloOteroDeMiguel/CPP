@@ -6,7 +6,7 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2022/12/26 09:38:35 by potero-d         ###   ########.fr        #
+#    Updated: 2023/01/09 12:44:00 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = convert
 
 CC = clang++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wpedantic -Wno-c++0x-compat #-std=c++98 -pedantic
 
 %.o:%.cpp
 		$(CC) $(CFLAGS) -c  $< -o $(<:.cpp=.o) 

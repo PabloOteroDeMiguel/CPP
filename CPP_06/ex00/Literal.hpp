@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 09:18:35 by potero-d          #+#    #+#             */
-/*   Updated: 2023/01/09 12:08:22 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/09 13:05:29 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Literal {
 		std::string	getString();
 		int			getInt();
 		char		getChar();
-		float		getFloat();
+		void		getFloat();
 		double		getDouble();
 		
 		void		cast();
