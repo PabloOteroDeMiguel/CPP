@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 09:18:35 by potero-d          #+#    #+#             */
-/*   Updated: 2023/01/09 13:05:29 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:42:34 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include<iostream>
 #include<ostream>
 #include<string>
-#include <ctype.h>
+#include<ctype.h>
 
 class Literal {
 
@@ -29,12 +29,14 @@ class Literal {
 		Literal&	operator=(Literal& rhs);
 		
 		std::string	getString();
-		int			getInt();
-		char		getChar();
+		void		getInt();
+		void		getChar();
 		void		getFloat();
-		double		getDouble();
+		void		getDouble();
 		
 		void		cast();
+		int			check_string(std::string arg);
+		int			pseudo(std::string arg);
 
 	private:
 
@@ -43,6 +45,8 @@ class Literal {
 		char		l_char;
 		float		l_float;
 		double		l_double;
+		int			dot;
+		int			possible;
 
 };
 
