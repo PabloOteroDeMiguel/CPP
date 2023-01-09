@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 09:18:35 by potero-d          #+#    #+#             */
-/*   Updated: 2022/12/26 12:48:50 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/09 12:08:22 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include<iostream>
 #include<ostream>
 #include<string>
+#include <ctype.h>
 
 class Literal {
 
