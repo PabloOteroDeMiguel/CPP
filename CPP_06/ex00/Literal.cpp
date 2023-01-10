@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 09:18:30 by potero-d          #+#    #+#             */
-/*   Updated: 2023/01/09 16:01:14 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/10 10:48:56 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,20 +114,28 @@ void	Literal::cast() {
 
 	double	lit;
 
+	lit = 0;
 	this->possible = check_string(this->l_string);
-//	std::cout << "Check: " << check_string(this->l_string) << std::endl;
-//	std::cout << "Dot: " << this->dot << std::endl;
-	lit = std::atof(this->l_string.c_str());
-	std::cout << lit << std::endl;
+	if (this->l_string.length() == 1) {
+		
+		this->l_char = this->l_string[0];
+		this->l_int = static_cast<int>(this->l_char);
+		this->l_float = static_cast<float>(this->l_char);
+		this->l_double = static_cast<double>(this->l_char);
+	}
+	else {
+
+		lit = std::atof(this->l_string.c_str());
+		this->l_char = static_cast<char>(lit);
+		this->l_int = static_cast<int>(lit);
+		this->l_float = static_cast<float>(lit);
+		this->l_double = static_cast<double>(lit);
+	}
 	std::cout.precision(this->dot);
 	std::cout << std::fixed;
-	this->l_char = static_cast<char>(lit);
 	getChar();
-	this->l_int = static_cast<int>(lit);
 	getInt();
-	this->l_float = static_cast<float>(lit);
 	getFloat();
-	this->l_double = static_cast<double>(lit);
 	getDouble();
 }
 
@@ -138,6 +146,10 @@ int	Literal::check_string(std::string arg) {
 
 	i = 0;
 	d = 0;
+	if (this->l_string.length() == 1) {
+
+		return (0);
+	}
 	if (arg[i] == '-' || arg[i] == '+') {
 
 		i++;
