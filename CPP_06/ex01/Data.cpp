@@ -6,7 +6,7 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:13:45 by potero-d          #+#    #+#             */
-/*   Updated: 2023/01/10 12:20:45 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:48:12 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ Data::Data(std::string id) : _id(id) {
 
 Data::~Data(void) {
 
-	return(0);
+	return;
 }
 
 Data::Data(Data& cpy) {
 
-	*this = copy;
+	*this = cpy;
 	return;
 }
 

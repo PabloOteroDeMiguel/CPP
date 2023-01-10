@@ -6,7 +6,7 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2023/01/10 12:21:21 by potero-d         ###   ########.fr        #
+#    Updated: 2023/01/10 13:05:50 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS = main.cpp Data.cpp Serialize.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = convert
+NAME = serialize
 
 CC = clang++
 

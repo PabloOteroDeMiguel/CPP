@@ -6,12 +6,15 @@
 /*   By: potero-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:54:17 by potero-d          #+#    #+#             */
-/*   Updated: 2023/01/10 12:20:45 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:33:45 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DATA_HPP
 # define DATA_HPP
+
+#include <iostream>
+#include <ostream>
 
 class Data {
 
@@ -25,9 +28,9 @@ class Data {
 
 		std::string getId();
 
-	privatre:
+	private:
 
-		 std::strig	_id;
+		 std::string	_id;
 	
 };
 
