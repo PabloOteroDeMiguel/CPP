@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:48:43 by potero            #+#    #+#             */
-/*   Updated: 2023/01/11 08:39:33 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/11 09:43:33 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int main(void) {
 	std::cout << "Last: ";
 	identify(last);
 	sleep(1);
-/*
-	Base *error = generate();
+
+	Base *error = NULL;
 	std::cout << "Error: ";
-	identify(*error);
-*/
+	identify(error);
+
 	delete first;
 	delete second;
 	delete last;

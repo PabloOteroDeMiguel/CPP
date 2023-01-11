@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:46:34 by potero            #+#    #+#             */
-/*   Updated: 2023/01/11 08:37:04 by potero-d         ###   ########.fr       */
+/*   Updated: 2023/01/11 10:08:27 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+
+class Exception : virtual public std::exception {
+
+			public:
+				virtual const char* what() const throw();
+		};
+
+const char*	Exception::what() const throw() {
+
+	return("Is NULL.");
+}
 
 Base	*generate(void)
 {
@@ -34,40 +45,27 @@ Base	*generate(void)
 	}
 }
 
-void	identify(Base *p)
-{
-	try
-	{
+void	tryIdentify(Base *p) {
+
 		if (dynamic_cast<A*>(p))
 			std::cout << "Is A" << std::endl;
 		else if (dynamic_cast<B*>(p))
 			std::cout << "Is B" << std::endl;
 		else if (dynamic_cast<C*>(p))
 			std::cout << "Is C" << std::endl;
-	}
-	catch(int e)
-	{
-		std::cout << "Is Null" << std::endl;
-	}
-/*
-	try 
-	{
-		dynamic_cast<A*>(p);
-		std::cout << "Is A" << std::endl;
-	}
+		else
+			throw Exception();
+}
+
+
+void	identify(Base *p)
+{
 	try
 	{
-		dynamic_cast<B*>(p);
-		std::cout << "Is B" << std::endl;
+		tryIdentify(p);
 	}
-	try
+	catch(std::exception & e)
 	{
-		dynamic_cast<C*>(p);
-		std::cout << "Is C" << std::endl;
+		std::cout << e.what() << std::endl;
 	}
-	catch
-	{
-		std::cout << "Is Null" << std::endl;
-	}
-*/
 }

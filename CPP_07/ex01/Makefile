@@ -6,15 +6,15 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2023/01/11 08:19:18 by potero-d         ###   ########.fr        #
+#    Updated: 2023/01/11 09:27:58 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Base.cpp A.cpp B.cpp C.cpp generate.cpp
+SRCS = main.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = generate
+NAME = template
 
 CC = clang++
 
