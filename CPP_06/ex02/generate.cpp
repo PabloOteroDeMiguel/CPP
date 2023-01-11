@@ -6,7 +6,7 @@
 /*   By: potero <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:46:34 by potero            #+#    #+#             */
-/*   Updated: 2023/01/10 18:51:46 by potero           ###   ########.fr       */
+/*   Updated: 2023/01/11 08:37:04 by potero-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 
 Base	*generate(void)
 {
-	srand(time(NULL));
-	switch (rand() % 3)
+	int	random;
+
+	srand((unsigned) time(NULL));
+	random = rand() % 3;
+	switch (random)
 	{
 	case 0:
 		return (new A);
@@ -33,11 +36,38 @@ Base	*generate(void)
 
 void	identify(Base *p)
 {
-//	try catch
-	if (dynamic_cast<A*>(p))
+	try
+	{
+		if (dynamic_cast<A*>(p))
+			std::cout << "Is A" << std::endl;
+		else if (dynamic_cast<B*>(p))
+			std::cout << "Is B" << std::endl;
+		else if (dynamic_cast<C*>(p))
+			std::cout << "Is C" << std::endl;
+	}
+	catch(int e)
+	{
+		std::cout << "Is Null" << std::endl;
+	}
+/*
+	try 
+	{
+		dynamic_cast<A*>(p);
 		std::cout << "Is A" << std::endl;
-	else if (dynamic_cast<B*>(p))
+	}
+	try
+	{
+		dynamic_cast<B*>(p);
 		std::cout << "Is B" << std::endl;
-	else if (dynamic_cast<C*>(p))
+	}
+	try
+	{
+		dynamic_cast<C*>(p);
 		std::cout << "Is C" << std::endl;
+	}
+	catch
+	{
+		std::cout << "Is Null" << std::endl;
+	}
+*/
 }

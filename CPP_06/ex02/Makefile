@@ -6,7 +6,7 @@
 #    By: potero-d <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 17:12:08 by potero-d          #+#    #+#              #
-#    Updated: 2023/01/10 18:32:40 by potero           ###   ########.fr        #
+#    Updated: 2023/01/11 08:19:18 by potero-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS = main.cpp Base.cpp A.cpp B.cpp C.cpp generate.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = serialize
+NAME = generate
 
 CC = clang++
 
